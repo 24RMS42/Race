@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    local:MvxBind="BackgroundColor NativeColor(Theme.Colors.HeaderColor);">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <LinearLayout
+                android:id="@+id/leftPanel"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:layout_weight="0.3">
+                <ImageButton
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:alpha="100"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="15dp"
+                    local:MvxBind="Click LiveRecordCommand; Visibility ShowLiveRecordButton, Converter=Visibility; AssetImagePath Theme.Images.HeaderRegister" />
+                <ImageButton
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:alpha="100"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="15dp"
+                    local:MvxBind="Click FavoritRecordCommand; Visibility ShowFavoritButton, Converter=Visibility; AssetImagePath Theme.Images.HeaderRegisterFavorit" />
+            </LinearLayout>
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4">
+                <ImageView
+                    android:id="@+id/imageViewHeder"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:maxWidth="30dp"
+                    local:MvxBind="Click TapLogoCommand; AssetImagePath Theme.Images.HeaderLogo" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/rightPanel"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3">
+                <ImageButton
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="right"
+                    local:MvxBind="Click LoginCommand; Visibility ShowLoginButton, Converter=Visibility; AssetImagePath Theme.Images.HeaderGoToWeb" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

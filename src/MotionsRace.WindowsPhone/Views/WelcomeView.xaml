@@ -1,0 +1,139 @@
+<views:MvxWindowsPage
+    x:Class="MotionsRace.WindowsPhone.Views.WelcomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
+    mc:Ignorable="d" RequestedTheme="Light" Background="{Binding Colors[WELCOME_BACKGROUND_COLOR], Converter={StaticResource NativeColorValueConverter}, FallbackValue=#EDEBEE}">
+    <views:MvxWindowsPage.Resources>
+        <Style x:Key="FlipViewStyle" TargetType="FlipView">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="10"/>
+            <Setter Property="TabNavigation" Value="Once"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
+            <Setter Property="ScrollViewer.IsHorizontalRailEnabled" Value="False"/>
+            <Setter Property="ScrollViewer.IsVerticalRailEnabled" Value="False"/>
+            <Setter Property="ScrollViewer.IsHorizontalScrollChainingEnabled" Value="True"/>
+            <Setter Property="ScrollViewer.IsVerticalScrollChainingEnabled" Value="True"/>
+            <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False"/>
+            <Setter Property="ScrollViewer.BringIntoViewOnFocusChange" Value="True"/>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel AreScrollSnapPointsRegular="True" Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="FlipView">
+                        <Grid>
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="{TemplateBinding Background}">
+                                <Grid>
+                                    <ScrollViewer x:Name="ScrollingHost" AutomationProperties.AccessibilityView="Raw" BringIntoViewOnFocusChange="{TemplateBinding ScrollViewer.BringIntoViewOnFocusChange}" HorizontalScrollMode="{TemplateBinding ScrollViewer.HorizontalScrollMode}" HorizontalSnapPointsType="MandatorySingle" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" IsTabStop="False" IsHorizontalRailEnabled="{TemplateBinding ScrollViewer.IsHorizontalRailEnabled}" IsHorizontalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsHorizontalScrollChainingEnabled}" IsVerticalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsVerticalScrollChainingEnabled}" IsVerticalRailEnabled="{TemplateBinding ScrollViewer.IsVerticalRailEnabled}" IsDeferredScrollingEnabled="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}" Padding="{TemplateBinding Padding}" TabNavigation="{TemplateBinding TabNavigation}" VerticalSnapPointsType="MandatorySingle" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" VerticalScrollMode="{TemplateBinding ScrollViewer.VerticalScrollMode}" ZoomMode="Disabled">
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </views:MvxWindowsPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="LayoutRoot">
+            <Grid.Resources>
+                <SolidColorBrush x:Key="FlipNavigationEllipseCommonBrush" Color="{Binding Colors[WELCOME_SLIDER_INDICATOR_NOT_SELECTED_COLOR], Converter={StaticResource NativeColorValueConverter}, FallbackValue=#7D000000}"/>
+                <x:Double x:Key="FlipNavigationEllipseWidth">20</x:Double>
+                <Thickness x:Key="FlipNavigationEllipseMargin">8,0</Thickness>
+            </Grid.Resources>
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+
+            <FlipView x:Name="sliderFlipView" Margin="0,0,0,-100" SelectionChanged="sliderFlipView_SelectionChanged" Style="{StaticResource FlipViewStyle}">
+                <Grid>
+                    <Image Source="ms-appx:///Assets/Slide1.png" Stretch="UniformToFill"/>
+                    <TextBlock Text="{Binding [Login_Splashtext], FallbackValue='Enjoy the glow of good health. Exercise and choose good habits.'}" 
+                               Style="{StaticResource HeaderTextBlockStyle}" 
+                               FontSize="24" Foreground="White" 
+                               VerticalAlignment="Center" HorizontalAlignment="Center" 
+                               TextWrapping="Wrap" LineHeight="40" TextAlignment="Center" Margin="0,60,0,0"/>
+                </Grid>
+                <Grid>
+                    <Image Source="ms-appx:///Assets/Slide2.png" Stretch="UniformToFill"/>
+                    <TextBlock Text="{Binding [Login_Splashtext], FallbackValue='Enjoy the glow of good health. Exercise and choose good habits.'}" 
+                               Style="{StaticResource HeaderTextBlockStyle}" 
+                               FontSize="24" Foreground="White" 
+                               VerticalAlignment="Center" HorizontalAlignment="Center" 
+                               TextWrapping="Wrap" LineHeight="40" TextAlignment="Center" Margin="0,60,0,0"/>
+                </Grid>
+                <Grid>
+                    <Image Source="ms-appx:///Assets/Slide3.png" Stretch="UniformToFill"/>
+                    <TextBlock Text="{Binding [Login_Splashtext], FallbackValue='Enjoy the glow of good health. Exercise and choose good habits.'}" 
+                               Style="{StaticResource HeaderTextBlockStyle}" 
+                               FontSize="24" Foreground="White" 
+                               VerticalAlignment="Center" HorizontalAlignment="Center" 
+                               TextWrapping="Wrap" LineHeight="40" TextAlignment="Center" Margin="0,60,0,0"/>
+                </Grid>
+            </FlipView>
+
+            <StackPanel x:Name="navList"                    
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom" 
+                    Margin="0,0,0,20">
+                <Ellipse Fill="{StaticResource FlipNavigationEllipseCommonBrush}"  
+                     Width="{StaticResource FlipNavigationEllipseWidth}" 
+                     Height="{StaticResource FlipNavigationEllipseWidth}"
+                     Margin="{StaticResource FlipNavigationEllipseMargin}"/>
+                <Ellipse Fill="{StaticResource FlipNavigationEllipseCommonBrush}" 
+                     Width="{StaticResource FlipNavigationEllipseWidth}" 
+                     Height="{StaticResource FlipNavigationEllipseWidth}"
+                     Margin="{StaticResource FlipNavigationEllipseMargin}"/>
+                <Ellipse Fill="{StaticResource FlipNavigationEllipseCommonBrush}" 
+                     Width="{StaticResource FlipNavigationEllipseWidth}" 
+                     Height="{StaticResource FlipNavigationEllipseWidth}"
+                     Margin="{StaticResource FlipNavigationEllipseMargin}"/>
+            </StackPanel>
+            <!--<HyperlinkButton Content="English" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"/>-->
+        </Grid>
+
+
+        <Grid Grid.Row="1" Margin="0,-10,0,-10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button 
+                Content="{Binding [Welcome_SignUp], FallbackValue='Iam New-'}" 
+                Command="{Binding SignUpCommand}" 
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="{Binding Colors[WELCOME_SIGN_UP_BACKGROUND_COLOR], Converter={StaticResource NativeColorValueConverter}, FallbackValue=#379DFF}"
+                Foreground="{Binding Colors[WELCOME_SIGN_UP_FOREGROUND_COLOR], Converter={StaticResource NativeColorValueConverter}, FallbackValue=#FFFFFF}"                
+                BorderThickness="0" FontSize="28"/>
+            <Button 
+                Grid.Column="1"                
+                Content="{Binding [Welcome_SignIn], FallbackValue='Sign In-'}" 
+                Command="{Binding SignInCommand}" 
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="{Binding Colors[WELCOME_SIGN_IN_BACKGROUND_COLOR], Converter={StaticResource NativeColorValueConverter}, FallbackValue=#FFFFFF}"
+                Foreground="{Binding Colors[WELCOME_SIGN_IN_FOREGROUND_COLOR], Converter={StaticResource NativeColorValueConverter}, FallbackValue=#379DFF}"                                
+                BorderThickness="0" FontSize="28" />
+        </Grid>
+    </Grid>
+</views:MvxWindowsPage>

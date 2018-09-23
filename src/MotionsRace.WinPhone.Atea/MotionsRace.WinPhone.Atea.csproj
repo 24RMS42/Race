@@ -1,0 +1,790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4E1BE65-1FCC-494C-9F88-225DED390F2F}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MotionsRace.WinPhone</RootNamespace>
+    <AssemblyName>MotionsRace.WinPhone.Atea</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>MotionsRace.WinPhone.Atea_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>MotionsRace.WinPhone.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ReleaseVersion>4.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;ATEA</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;ATEA</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;ATEA</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;ATEA</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\MotionsRace.WinPhone\App.xaml.cs">
+      <Link>App.xaml.cs</Link>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Controls\HeaderControl.xaml.cs">
+      <Link>Controls\HeaderControl.xaml.cs</Link>
+      <DependentUpon>HeaderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Converters\CategoryImageConverter.cs">
+      <Link>Converters\CategoryImageConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Converters\Converters.cs">
+      <Link>Converters\Converters.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Converters\DesignTimeConverter.cs">
+      <Link>Converters\DesignTimeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Converters\ImageConverter.cs">
+      <Link>Converters\ImageConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\DebugTrace.cs">
+      <Link>DebugTrace.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Extensions\AsyncExt.cs">
+      <Link>Extensions\AsyncExt.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Extensions\TextBlockExtension.cs">
+      <Link>Extensions\TextBlockExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\LocalizedStrings.cs">
+      <Link>LocalizedStrings.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Services\ImageResizeService.cs">
+      <Link>Services\ImageResizeService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Services\IMobileServiceSoap.cs">
+      <Link>Services\IMobileServiceSoap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Services\MessageService.cs">
+      <Link>Services\MessageService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Services\NavigationService.cs">
+      <Link>Services\NavigationService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Services\PlatformService.cs">
+      <Link>Services\PlatformService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Services\WebService.cs">
+      <Link>Services\WebService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Services\XamarinInsights.cs">
+      <Link>Services\XamarinInsights.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Setup.cs">
+      <Link>Setup.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Views\ActivityItemView.xaml.cs">
+      <Link>Views\ActivityItemView.xaml.cs</Link>
+      <DependentUpon>ActivityItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Views\ActivityTypesView.xaml.cs">
+      <Link>Views\ActivityTypesView.xaml.cs</Link>
+      <DependentUpon>ActivityTypesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Views\MainView.xaml.cs">
+      <Link>Views\MainView.xaml.cs</Link>
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Views\SignInView.xaml.cs">
+      <Link>Views\SignInView.xaml.cs</Link>
+      <DependentUpon>SignInView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\MotionsRace.WinPhone\Views\WelcomeView.xaml.cs">
+      <Link>Views\WelcomeView.xaml.cs</Link>
+      <DependentUpon>WelcomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\PictureChooserPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\SqlitePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\UserDialogsPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MobileService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageViewerView.xaml.cs">
+      <DependentUpon>ImageViewerView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\ApplicationIcon.png" />
+    <Content Include="icon.wvga.png" />
+    <Content Include="icon.wxga.png" />
+    <None Include="Service References\MobileService\MobileService.disco" />
+    <None Include="Service References\MobileService\configuration91.svcinfo" />
+    <None Include="Service References\MobileService\configuration.svcinfo" />
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.AddFriendsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.AddPersonToTeamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.ArchivePersonalMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.AuthenticateLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.AuthorizeRaceAccessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.CheckIfPersonIsManagerOfTeamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.CreateReplyToMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.DeleteGoalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.DeletePersonalMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.DeleteTrainingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.EarnMedalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.EarnMedalTranslatedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetAllPersonsOfTheTeamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetAvailableMedalsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetAvailableMedalsTranslatedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetBrandSpecificTranslationStringsIOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetBrandSpecificTranslationStringsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetGoalPeriodResultsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetGoalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetGoalsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetHighscores_BestPersonsInMyListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetHighscores_BestPersonsInTeamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetHighscores_BestSubTeamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMostRecentTeamActivityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMostRecentTrainingInTeamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMyFriendsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMyNewsFeedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMyNewsStreamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMyRankingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMySettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetMyTeamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetNumberOfMedalsPerPersonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetNumberOfUnreadPersonalMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetParticipantOverviewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetPersonalMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetPersonInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetPostingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetRaceByRaceKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetRaceFromSignUpCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetRaceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetRacesAPersonCanLoginToResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetRacesAvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetRisingStarOfTheWeekResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetSentPersonalMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetServerDateTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTeamInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTeamsByRaceIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTeamsPersonIsAManagerOfResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTeamsPersonIsAMemberOfResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTeamStreamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetThreadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetThreadsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTotalNumberOfPointsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTrainingForCalendarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTrainingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetTrainingTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.GetWhatsGoingOnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.IsMyFriendResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.MarkOrUnmarkPersonalMessageAsReadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.MarkPersonalMessagesAsReadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.MarkThreadAsReadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.RemoveFriendResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.SaveDailyActivityScoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.SaveGoalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.SavePostingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.SaveTrainingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.SaveTrainingShareToFacebookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.SendPersonalMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.TemplateCallHelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.UnearnMedalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.UpdateMySettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.UpdatePictureURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.UpdateTeamPictureURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.UpdateTeamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.ValidateAndCreateSecretResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.ValidateAndCreateSecret_AlternateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.ValidateEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\MotionsRace.WinPhone.MobileService.ValidateUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobileService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="..\MotionsRace.WinPhone\Assets\checkbox.png">
+      <Link>Assets\checkbox.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\checkbox_selected.png">
+      <Link>Assets\checkbox_selected.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_01.png">
+      <Link>Assets\Clock\clock_animation_01.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_02.png">
+      <Link>Assets\Clock\clock_animation_02.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_03.png">
+      <Link>Assets\Clock\clock_animation_03.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_04.png">
+      <Link>Assets\Clock\clock_animation_04.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_05.png">
+      <Link>Assets\Clock\clock_animation_05.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_06.png">
+      <Link>Assets\Clock\clock_animation_06.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_07.png">
+      <Link>Assets\Clock\clock_animation_07.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_08.png">
+      <Link>Assets\Clock\clock_animation_08.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_09.png">
+      <Link>Assets\Clock\clock_animation_09.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_10.png">
+      <Link>Assets\Clock\clock_animation_10.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_11.png">
+      <Link>Assets\Clock\clock_animation_11.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\Clock\clock_animation_12.png">
+      <Link>Assets\Clock\clock_animation_12.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\clock_icon_white.png">
+      <Link>Assets\clock_icon_white.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\cloud_refresh.png">
+      <Link>Assets\cloud_refresh.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\header_logo.png">
+      <Link>Assets\header_logo.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\LoginPassword.png">
+      <Link>Assets\LoginPassword.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\LoginUser.png">
+      <Link>Assets\LoginUser.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\restart.png">
+      <Link>Assets\restart.png</Link>
+    </Content>
+    <Content Include="..\MotionsRace.WinPhone\Assets\select_image.png">
+      <Link>Assets\select_image.png</Link>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png" />
+    <Content Include="Assets\atea\circleFace.png" />
+    <Content Include="Assets\atea\face.png" />
+    <Content Include="Assets\atea\ic_next.png" />
+    <Content Include="Assets\atea\ic_plus.png" />
+    <Content Include="Assets\atea\loginBackground.png" />
+    <Content Include="Assets\atea\slide1.png" />
+    <Content Include="Assets\atea\slide2.png" />
+    <Content Include="Assets\atea\slide3.png" />
+    <Content Include="Assets\atea\splashlogo.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset01.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset01sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset02.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset02sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset03.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset03sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset04.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset04sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset05.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset05sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset06.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset06sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset07.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset07sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset08.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset08sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset09.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset09sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset10.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset10sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset11.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset11sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset12.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset12sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset13.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset13sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset14.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset14sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset15.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset15sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset16.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset16sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset17.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset17sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset18.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset18sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset19.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset19sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset20.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset20sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset21.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset21sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset22.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset22sel.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset23.png" />
+    <Content Include="Assets\atea\TraningCategories\iconset23sel.png" />
+    <Content Include="Assets\atea\atea.png" />
+    <Content Include="Assets\atea\atealogo.png" />
+    <Content Include="Assets\atea\atealogo2.png" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\MobileService\MobileService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
+      <Project>{c833abe2-8b6d-4af3-abfb-c132ebe0ed3e}</Project>
+      <Name>MotionsRace.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="..\MotionsRace.WinPhone\App.xaml">
+      <Link>App.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="..\MotionsRace.WinPhone\Controls\HeaderControl.xaml">
+      <Link>Controls\HeaderControl.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\MotionsRace.WinPhone\Views\ActivityItemView.xaml">
+      <Link>Views\ActivityItemView.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\MotionsRace.WinPhone\Views\ActivityTypesView.xaml">
+      <Link>Views\ActivityTypesView.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\MotionsRace.WinPhone\Views\MainView.xaml">
+      <Link>Views\MainView.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\MotionsRace.WinPhone\Views\SignInView.xaml">
+      <Link>Views\SignInView.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\MotionsRace.WinPhone\Views\WelcomeView.xaml">
+      <Link>Views\WelcomeView.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ImageViewerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Acr.MvvmCross.Plugins.UserDialogs, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.MvvmCross.Plugins.UserDialogs.4.1.0\lib\wp8\Acr.MvvmCross.Plugins.UserDialogs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Acr.MvvmCross.Plugins.UserDialogs.WP8, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.MvvmCross.Plugins.UserDialogs.4.1.0\lib\wp8\Acr.MvvmCross.Plugins.UserDialogs.WP8.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Acr.UserDialogs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.UserDialogs.4.1.4\lib\wp8\Acr.UserDialogs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Acr.UserDialogs.4.1.4\lib\wp8\Acr.UserDialogs.Interface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\wp8\Cirrious.CrossCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\wp8\Cirrious.CrossCore.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\wp8\Cirrious.MvvmCross.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\wp8\Cirrious.MvvmCross.Localization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Color.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.File.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.File.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.File.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Json.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.PictureChooser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.PictureChooser.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.PictureChooser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.PictureChooser.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.PictureChooser.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.PictureChooser.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Sqlite.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Sqlite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Sqlite.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Sqlite.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.5.1\lib\wp8\Cirrious.MvvmCross.Plugins.Visibility.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\wp8\Cirrious.MvvmCross.WindowsPhone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Community.CsharpSqlite.WP7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Sqlite.3.5.1\lib\wp8\Community.CsharpSqlite.WP7.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Splat.1.6.2\lib\wp8\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Behaviors">
+      <HintPath>..\..\packages\Telerik\Telerik.Windows.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data">
+      <HintPath>..\..\packages\Telerik\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization">
+      <HintPath>..\..\packages\Telerik\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>..\..\packages\Telerik\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Primitives">
+      <HintPath>..\..\packages\Telerik\Telerik.Windows.Controls.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core">
+      <HintPath>..\..\packages\Telerik\Telerik.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights, Version=1.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Insights.1.11.1\lib\WP80\Xamarin.Insights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MobileService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Insights.1.11.1\build\WP80\Xamarin.Insights.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Insights.1.11.1\build\WP80\Xamarin.Insights.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xamarin.Insights.1.11.1\build\WP80\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.11.1\build\WP80\Xamarin.Insights.targets')" />
+</Project>

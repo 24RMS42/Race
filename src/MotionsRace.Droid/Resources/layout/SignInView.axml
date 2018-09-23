@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxBind="AssetImagePath Theme.Images.LoginBackground"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:id="@+id/imageLayout"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="200dp"
+                android:layout_height="163dp"
+                local:MvxBind="AssetImagePath Theme.Images.LoginLogo" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/imageView1"
+            android:id="@+id/textLayout"
+            android:gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/layoutHome"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/imageLayout"
+                android:minWidth="290dp"
+                android:minHeight="25dp"
+                local:MvxBind="BackgroundColor NativeColor(Theme.Colors.LoginPanelBackgroundColor)">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout1"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:minHeight="25px">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="center">
+                        <TextView
+                            android:text="Text"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textTitle"
+                            android:textColor="#ff000000"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            local:MvxBind="Text [Login_WelcomeTo]; TextColor NativeColor(Theme.Colors.LoginWelcomeColor)" />
+                        <TextView
+                            android:text="Text"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textTitle"
+                            android:textColor="#ff000000"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            local:MvxBind="Text Theme.Name; TextColor NativeColor(Theme.Colors.LoginWelcomeColor)" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layoutEmail"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_below="@id/textTitle"
+                        local:MvxBind=" BackgroundColor NativeColor(Theme.Colors.LoginTextBoxBackgroundColor)">
+                        <ImageView
+                            android:src="@drawable/LoginUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="8dp"
+                            local:MvxBind="BackgroundColor NativeColor(Theme.Colors.LoginTextBoxBackgroundColor)" />
+                        <EditText
+                            android:hint="Text"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:textColorHint="#ffffffff"
+                            android:textSize="15dp"
+                            local:MvxBind="Hint [Login_Email]; Text UserName; TextColor NativeColor(Theme.Colors.LoginTextBoxColor); BackgroundColor NativeColor(Theme.Colors.LoginTextBoxBackgroundColor); Enabled  InvertBool(IsBusy)"
+                            android:id="@+id/textEmail" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        local:MvxBind="BackgroundColor NativeColor(Theme.Colors.LoginTextBoxBackgroundColor)"
+                        android:id="@+id/layoutPassword">
+                        <ImageView
+                            android:src="@drawable/LoginPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="8dp"
+                            local:MvxBind="BackgroundColor NativeColor(Theme.Colors.LoginTextBoxBackgroundColor)" />
+                        <EditText
+                            android:hint="Text"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:textColorHint="#ffffffff"
+                            android:textSize="15dp"
+                            local:MvxBind="Hint [Login_Password]; Text Password; TextColor NativeColor(Theme.Colors.LoginTextBoxColor); BackgroundColor NativeColor(Theme.Colors.LoginTextBoxBackgroundColor); Enabled  InvertBool(IsBusy)"
+                            android:id="@+id/textPassword" />
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/customButton"
+                        android:text="Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        local:MvxBind="Text [Login_SignIn]; Click SignInCommand; Enabled  InvertBool(IsBusy)"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="19dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:gravity="center" />
+                    <TextView
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="#ffffffff"
+                        android:paddingTop="15dp"
+                        android:textSize="15dp"
+                        local:MvxBind="Text [Login_ForgotPassword]; Click ForgotPassword; TextColor NativeColor(Theme.Colors.LoginWelcomeColor); Enabled  InvertBool(IsBusy)"
+                        android:id="@+id/forgotPassword"
+                        android:clickable="true"
+                        android:autoLink="none"
+                        android:text="Forgot password?"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold" />
+					 <LinearLayout
+						android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+						android:paddingLeft="0dp"
+						android:layout_marginLeft="0dp"
+						android:layout_marginRight="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="0dp"
+                        local:MvxBind="BackgroundColor NativeColor(Theme.Colors.ActivitySaveButtonColor)"
+                        android:id="@+id/layoutOauth">
+						<TextView
+	                        android:textAppearance="?android:attr/textAppearanceLarge"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:textColorHint="#ffffffff"
+	                        android:paddingTop="5dp"
+							android:paddingRight="5dp"
+							android:paddingLeft="5dp"
+	                        android:textSize="15dp"
+	                        android:id="@+id/closeOAuthLink"
+	                        android:clickable="true"
+	                        android:autoLink="none"
+	                        android:text="X"
+							local:MvxBind="TextColor NativeColor(Theme.Colors.LoginWelcomeColor);"
+							android:layout_marginLeft="0dp"
+							android:gravity="right"
+	                        android:layout_gravity="right"
+	                        android:layout_marginRight="5dp"
+	                        android:textStyle="bold" />
+                        <Button
+	                        android:id="@+id/oauthButton"
+	                        android:text="Text"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="wrap_content"
+	                        android:layout_margin="10dp"
+	                        android:layout_gravity="center"
+	                        android:textColor="#FFFFFF"
+	                        android:textSize="19dp"
+	                        android:textAppearance="?android:attr/textAppearanceLarge"
+	                        android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/appVersion"
+            android:text="AppVersion"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            local:MvxBind="Text AppVersion; TextColor NativeColor(Theme.Colors.LoginTextBoxColor)"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:background="#edebee"
+        android:alpha="0.8"
+        android:visibility="gone"
+        local:MvxBind="Visibility IsBusy, Converter=Visibility">
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:alpha="1" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minLines="2"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:id="@+id/textView1"
+            local:MvxBind="Text StatusMessage"
+            android:layout_margin="10dp"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+</RelativeLayout>

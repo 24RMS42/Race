@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{DF0DF290-1925-4E53-AD0A-8E369AA9C215}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MotionsRace.Touch.Atea</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MotionsRaceTouchAtea</AssemblyName>
+    <ReleaseVersion>4.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ATEA</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Company Races C2 AB (U9WGAMM6A7)</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
+    <DefineConstants>ATEA</DefineConstants>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <DefineConstants>ATEA</DefineConstants>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ATEA</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Json">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Json.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Messenger.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PictureChooser">
+      <HintPath>..\..\packages\MvvmCross.Plugin.PictureChooser.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.PictureChooser.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PictureChooser.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.PictureChooser.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.PictureChooser.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\..\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Async">
+      <HintPath>..\..\packages\SQLite.Net.Async-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinIOS.Unified">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.1.1\lib\Xamarin.iOS10\SQLite.Net.Platform.XamarinIOS.Unified.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Sqlite">
+      <HintPath>..\..\packages\MvvmCross.Plugin.SQLitePCL.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Sqlite.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.SQLitePCL.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Sqlite.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Visibility.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Visibility.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.Visibility.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\..\packages\BTProgressHUD.1.2.0.3\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.1.6.2\lib\Xamarin.iOS10\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.Support.iOS">
+      <HintPath>..\..\packages\Acr.Support.2.1.0\lib\Xamarin.iOS10\Acr.Support.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.0.1\lib\Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.0.1\lib\Xamarin.iOS10\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\..\packages\Xamarin.Insights.1.11.1\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\..\packages\Xamarin.Insights.1.11.1\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.4.2.2\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core">
+      <HintPath>..\..\packages\PInvoke.Windows.Core.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32">
+      <HintPath>..\..\packages\PInvoke.Kernel32.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt">
+      <HintPath>..\..\packages\PInvoke.BCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt">
+      <HintPath>..\..\packages\PInvoke.NCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation">
+      <HintPath>..\..\packages\Validation.2.2.8\lib\dotnet\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto">
+      <HintPath>..\..\packages\PCLCrypto.2.0.147\lib\xamarinios10\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth">
+      <HintPath>..\..\packages\Xamarin.Auth.1.5.0\lib\Xamarin.iOS10\Xamarin.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Json" />
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.9\lib\Xamarin.iOS10\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.9\lib\Xamarin.iOS10\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+  <Import Project="..\..\packages\Xamarin.Insights.1.12.3\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.12.3\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+  <ItemGroup>
+    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
+      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
+      <Name>MotionsRace.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\MotionsRace.Droid\ApiClient\MotionsRaceClient.cs">
+      <Link>ApiClient\MotionsRaceClient.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\ActivityItemView.cs">
+      <Link>Views\ActivityItemView.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\ActivityTypesView.cs">
+      <Link>Views\ActivityTypesView.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\ImageViewerView.cs">
+      <Link>Views\ImageViewerView.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\MainView.cs">
+      <Link>Views\MainView.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\SignInViewModel.cs">
+      <Link>Views\SignInViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\WelcomeView.cs">
+      <Link>Views\WelcomeView.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Utils\ImageUtils.cs">
+      <Link>Utils\ImageUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Utils\Reachability.cs">
+      <Link>Utils\Reachability.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Services\ImageResizeService.cs">
+      <Link>Services\ImageResizeService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Services\MessageService.cs">
+      <Link>Services\MessageService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Services\NavigationService.cs">
+      <Link>Services\NavigationService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Services\PlatformService.cs">
+      <Link>Services\PlatformService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Droid\Services\WebService.cs">
+      <Link>Services\WebService.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\BoolToBarButtonEmptyViewValueConverter.cs">
+      <Link>Converters\BoolToBarButtonEmptyViewValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\CategoryImagePathValueConverter.cs">
+      <Link>Converters\CategoryImagePathValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\NewsItemFrameValueConverter.cs">
+      <Link>Converters\NewsItemFrameValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\NewsItemTextValueConverter.cs">
+      <Link>Converters\NewsItemTextValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\NewsTableFrameValueConverter.cs">
+      <Link>Converters\NewsTableFrameValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\NewsTimeValueConverter.cs">
+      <Link>Converters\NewsTimeValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\PercentsValueConverter.cs">
+      <Link>Converters\PercentsValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\TipsValueConverter.cs">
+      <Link>Converters\TipsValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\TypeNameFrameValueConverter.cs">
+      <Link>Converters\TypeNameFrameValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Controls\CustomButton.cs">
+      <Link>Controls\CustomButton.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Controls\LineLayout.cs">
+      <Link>Controls\LineLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Controls\LoadingOverlay.cs">
+      <Link>Controls\LoadingOverlay.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\AppDelegate.cs">
+      <Link>AppDelegate.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\DebugTrace.cs">
+      <Link>DebugTrace.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\LinkerPleaseInclude.cs">
+      <Link>LinkerPleaseInclude.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Setup.cs">
+      <Link>Setup.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\ColorPluginBootstrap.cs">
+      <Link>Bootstrap\ColorPluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\FilePluginBootstrap.cs">
+      <Link>Bootstrap\FilePluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\JsonPluginBootstrap.cs">
+      <Link>Bootstrap\JsonPluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\MessengerPluginBootstrap.cs">
+      <Link>Bootstrap\MessengerPluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\PictureChooserPluginBootstrap.cs">
+      <Link>Bootstrap\PictureChooserPluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\SqlitePluginBootstrap.cs">
+      <Link>Bootstrap\SqlitePluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\VisibilityPluginBootstrap.cs">
+      <Link>Bootstrap\VisibilityPluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Services\XamarinInsights.cs">
+      <Link>Services\XamarinInsights.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Converters\RegisterButtonFrameValueConverter.cs">
+      <Link>Converters\RegisterButtonFrameValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\FrequentTrainingView.cs">
+      <Link>Views\FrequentTrainingView.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Bootstrap\DownloadCachePluginBootstrap.cs">
+      <Link>Bootstrap\DownloadCachePluginBootstrap.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Main.cs">
+      <Link>Main.cs</Link>
+    </Compile>
+    <Compile Include="..\MotionsRace.Touch\Views\WebView.cs">
+      <Link>Views\WebView.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\checkbox_selected.png" />
+    <BundleResource Include="Resources\checkbox.png" />
+    <BundleResource Include="Resources\clock_animation_01.png" />
+    <BundleResource Include="Resources\clock_animation_02.png" />
+    <BundleResource Include="Resources\clock_animation_03.png" />
+    <BundleResource Include="Resources\clock_animation_04.png" />
+    <BundleResource Include="Resources\clock_animation_05.png" />
+    <BundleResource Include="Resources\clock_animation_06.png" />
+    <BundleResource Include="Resources\clock_animation_07.png" />
+    <BundleResource Include="Resources\clock_animation_08.png" />
+    <BundleResource Include="Resources\clock_animation_09.png" />
+    <BundleResource Include="Resources\clock_animation_10.png" />
+    <BundleResource Include="Resources\clock_animation_11.png" />
+    <BundleResource Include="Resources\clock_animation_12.png" />
+    <BundleResource Include="Resources\clock_icon_white.png" />
+    <BundleResource Include="Resources\clock_icon.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\faceborder.png" />
+    <BundleResource Include="Resources\header_logo.png" />
+    <BundleResource Include="Resources\ic_next.png" />
+    <BundleResource Include="Resources\ic_plus.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\intensity_circle.png" />
+    <BundleResource Include="Resources\LoginPassword.png" />
+    <BundleResource Include="Resources\LoginUser.png" />
+    <BundleResource Include="Resources\Logo.scale-240.png" />
+    <BundleResource Include="Resources\no_profile_96.png" />
+    <BundleResource Include="Resources\select_image.png" />
+    <BundleResource Include="Resources\SignInLogo.png" />
+    <BundleResource Include="Resources\SmallLogo.scale-240.png" />
+    <BundleResource Include="Resources\SplashScreen.scale-240.png" />
+    <BundleResource Include="Resources\Square71x71Logo.scale-240.png" />
+    <BundleResource Include="Resources\StoreLogo.scale-240.png" />
+    <BundleResource Include="Resources\WideLogo.scale-240.png" />
+    <BundleResource Include="Resources\Categories\iconset01.png" />
+    <BundleResource Include="Resources\Categories\iconset01sel.png" />
+    <BundleResource Include="Resources\Categories\iconset02.png" />
+    <BundleResource Include="Resources\Categories\iconset02sel.png" />
+    <BundleResource Include="Resources\Categories\iconset03.png" />
+    <BundleResource Include="Resources\Categories\iconset03sel.png" />
+    <BundleResource Include="Resources\Categories\iconset04.png" />
+    <BundleResource Include="Resources\Categories\iconset04sel.png" />
+    <BundleResource Include="Resources\Categories\iconset05.png" />
+    <BundleResource Include="Resources\Categories\iconset05sel.png" />
+    <BundleResource Include="Resources\Categories\iconset06.png" />
+    <BundleResource Include="Resources\Categories\iconset06sel.png" />
+    <BundleResource Include="Resources\Categories\iconset07.png" />
+    <BundleResource Include="Resources\Categories\iconset07sel.png" />
+    <BundleResource Include="Resources\Categories\iconset08.png" />
+    <BundleResource Include="Resources\Categories\iconset08sel.png" />
+    <BundleResource Include="Resources\Categories\iconset09.png" />
+    <BundleResource Include="Resources\Categories\iconset09sel.png" />
+    <BundleResource Include="Resources\Categories\iconset10.png" />
+    <BundleResource Include="Resources\Categories\iconset10sel.png" />
+    <BundleResource Include="Resources\Categories\iconset11.png" />
+    <BundleResource Include="Resources\Categories\iconset11sel.png" />
+    <BundleResource Include="Resources\Categories\iconset12.png" />
+    <BundleResource Include="Resources\Categories\iconset12sel.png" />
+    <BundleResource Include="Resources\Categories\iconset13.png" />
+    <BundleResource Include="Resources\Categories\iconset13sel.png" />
+    <BundleResource Include="Resources\Categories\iconset14.png" />
+    <BundleResource Include="Resources\Categories\iconset14sel.png" />
+    <BundleResource Include="Resources\Categories\iconset15.png" />
+    <BundleResource Include="Resources\Categories\iconset15sel.png" />
+    <BundleResource Include="Resources\Categories\iconset16.png" />
+    <BundleResource Include="Resources\Categories\iconset16sel.png" />
+    <BundleResource Include="Resources\Categories\iconset17.png" />
+    <BundleResource Include="Resources\Categories\iconset17sel.png" />
+    <BundleResource Include="Resources\Categories\iconset18.png" />
+    <BundleResource Include="Resources\Categories\iconset18sel.png" />
+    <BundleResource Include="Resources\Categories\iconset19.png" />
+    <BundleResource Include="Resources\Categories\iconset19sel.png" />
+    <BundleResource Include="Resources\Categories\iconset20.png" />
+    <BundleResource Include="Resources\Categories\iconset20sel.png" />
+    <BundleResource Include="Resources\Categories\iconset21.png" />
+    <BundleResource Include="Resources\Categories\iconset21sel.png" />
+    <BundleResource Include="Resources\Categories\iconset22.png" />
+    <BundleResource Include="Resources\Categories\iconset22sel.png" />
+    <BundleResource Include="Resources\Categories\iconset23.png" />
+    <BundleResource Include="Resources\Categories\iconset23sel.png" />
+    <BundleResource Include="Resources\Slide1.png" />
+    <BundleResource Include="Resources\Slide2.png" />
+    <BundleResource Include="Resources\Slide3.png" />
+    <BundleResource Include="Resources\SignInBackground.png" />
+    <BundleResource Include="Resources\appikon_sverigestafetten_512x512.png" />
+    <BundleResource Include="Resources\refresh_icon.png" />
+    <BundleResource Include="Resources\bar-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bootstrap\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\logo167.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon167_167.png" />
+  </ItemGroup>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+</Project>

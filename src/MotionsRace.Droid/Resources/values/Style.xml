@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+<style name="btnStyleSignIn" parent="@android:style/Widget.Button">
+       <item name="android:textSize">17sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:gravity">center</item>      
+       <item name="android:shadowRadius">0.20</item>      
+       <item name="android:padding">10dip</item>
+   </style> 
+
+
+   <style name="myPopupMenuStyle" parent="@android:style/Widget.PopupMenu">
+   <item name="android:popupBackground">#FFFFFF</item>
+   </style>
+
+  <style name="CustomProgressBarMain" parent="android:Widget.ProgressBar.Horizontal">
+    <item name="android:indeterminateOnly">false</item>
+    <item name="android:progressDrawable">@drawable/custom_progress_bar_horizontal_main</item>
+    <item name="android:minHeight">10dip</item>
+    <item name="android:maxHeight">20dip</item>
+    </style></resources>

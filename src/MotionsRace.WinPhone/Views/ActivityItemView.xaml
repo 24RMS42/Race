@@ -1,0 +1,450 @@
+﻿<views:MvxPhonePage
+	x:Class="MotionsRace.WinPhone.Views.ActivityItemView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:controls="clr-namespace:MotionsRace.WinPhone.Controls"
+	xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
+	xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+	mc:Ignorable="d" Background="#006184" Orientation="Portrait">
+
+    <views:MvxPhonePage.Resources>
+        <Style TargetType="CheckBox">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Padding" Value="0,0,0,0" />
+            <Setter Property="Margin" Value="0,0,0,0" />
+            <Setter Property="Background" Value="#D8D9DB" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CheckBox">
+                        <Grid Background="Transparent">
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="MouseOver" />
+                                    <VisualState x:Name="Pressed" />
+                                    <VisualState x:Name="Disabled" />
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
+																												Storyboard.TargetName="CheckMark">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
+																				                               Storyboard.TargetName="UnCheckMark">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Indeterminate" />
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                            <Grid Margin="0, 5, 12, 5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="24" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="../Assets/checkbox_selected.png" x:Name="CheckMark" HorizontalAlignment="Center"
+																	       Height="12"
+																	       IsHitTestVisible="False" Stretch="Fill" Visibility="Collapsed" VerticalAlignment="Center"
+																	       Width="12" />
+
+                                <Image Source="../Assets/checkbox.png" x:Name="UnCheckMark" HorizontalAlignment="Center" Height="12"
+																	       IsHitTestVisible="False" Stretch="Fill" Visibility="Collapsed" VerticalAlignment="Center"
+																	       Width="12" />
+
+                                <ContentControl
+																		x:Name="ContentContainer"
+																		ContentTemplate="{TemplateBinding ContentTemplate}"
+																		Content="{TemplateBinding Content}"
+																		Grid.Column="1" Foreground="{TemplateBinding Foreground}"
+																		HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+																		Margin="12,0,0,0" Padding="{TemplateBinding Padding}"
+																		VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </views:MvxPhonePage.Resources>
+
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="80" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<controls:HeaderControl
+			ShowAddButton="False"
+			ShowLoginButton="{Binding ShowLoginButton}"
+			Grid.Row="0" />
+		<Grid Grid.Row="1"
+		      Background="{Binding Theme.Colors.PageTitleColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#ffffff}">
+			<TextBlock
+				Text="{Binding [Activity_RegisterActivity], FallbackValue=Register Activity-}"
+				FontSize="26"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Foreground="{Binding Theme.Colors.TextPageTitleColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+			<Grid VerticalAlignment="Bottom" Height="2" Background="#D8D9DB" />
+		</Grid>
+
+		<Grid Grid.Row="2" Background="White">
+			<ScrollViewer Margin="20">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid
+						Opacity="0.7"
+						Background="{Binding Theme.Colors.ActivityItemPanelColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}">
+						<StackPanel Margin="5">
+							<TextBlock
+								Text="{Binding TrainingTypeName, FallbackValue=Text-}"
+								FontSize="16"
+								Foreground="{Binding Theme.Colors.ActivityItemPanelTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+							<TextBlock
+								Visibility="{Binding DescriptioinVisibility, Converter={StaticResource VisibilityValueConverter}}"
+								FontSize="12"
+								Foreground="{Binding Theme.Colors.ActivityItemPanelTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}"
+								Text="{Binding TrainingDescription, FallbackValue=Description-}" />
+						</StackPanel>
+					</Grid>
+
+					<Grid Grid.Row="1" Margin="0,0,0,20">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="5*" />
+							<ColumnDefinition Width="3*" />
+						</Grid.ColumnDefinitions>
+						<ListBox ItemsSource="{Binding DateCheckBoxes}" Margin="0,20,0,0">
+							<ListBox.ItemContainerStyle>
+								<Style TargetType="ListBoxItem">
+									<Setter Property="BorderThickness" Value="0" />
+									<Setter Property="Padding" Value="0,0,0,0" />
+									<Setter Property="Margin" Value="0,0,0,0" />
+								</Style>
+							</ListBox.ItemContainerStyle>
+							<ListBox.ItemTemplate>
+								<DataTemplate>
+									<CheckBox
+										FontSize="14"
+										Foreground="{Binding TextColor, Converter={StaticResource NativeColorValueConverter}}"
+										IsChecked="{Binding Checked, Mode=TwoWay}"
+										Content="{Binding DateText, FallbackValue=Date}">
+										<CheckBox.Style>
+											<Style TargetType="CheckBox">
+												<Setter Property="BorderThickness" Value="0" />
+												<Setter Property="Padding" Value="0,0,0,0" />
+												<Setter Property="Margin" Value="0,0,0,0" />
+												<Setter Property="Background" Value="#D8D9DB" />
+												<Setter Property="Template">
+													<Setter.Value>
+														<ControlTemplate TargetType="CheckBox">
+															<Grid Background="Transparent">
+
+																<VisualStateManager.VisualStateGroups>
+																	<VisualStateGroup x:Name="CommonStates">
+																		<VisualState x:Name="Normal" />
+																		<VisualState x:Name="MouseOver" />
+																		<VisualState x:Name="Pressed" />
+																		<VisualState x:Name="Disabled" />
+																	</VisualStateGroup>
+																	<VisualStateGroup x:Name="CheckStates">
+																		<VisualState x:Name="Checked">
+																			<Storyboard>
+																				<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
+																												Storyboard.TargetName="CheckMark">
+																					<DiscreteObjectKeyFrame KeyTime="0">
+																						<DiscreteObjectKeyFrame.Value>
+																							<Visibility>Visible</Visibility>
+																						</DiscreteObjectKeyFrame.Value>
+																					</DiscreteObjectKeyFrame>
+																				</ObjectAnimationUsingKeyFrames>
+																			</Storyboard>
+																		</VisualState>
+																		<VisualState x:Name="Unchecked">
+																			<Storyboard>
+																				<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
+																				                               Storyboard.TargetName="UnCheckMark">
+																					<DiscreteObjectKeyFrame KeyTime="0">
+																						<DiscreteObjectKeyFrame.Value>
+																							<Visibility>Visible</Visibility>
+																						</DiscreteObjectKeyFrame.Value>
+																					</DiscreteObjectKeyFrame>
+																				</ObjectAnimationUsingKeyFrames>
+																			</Storyboard>
+																		</VisualState>
+																		<VisualState x:Name="Indeterminate" />
+																	</VisualStateGroup>
+																</VisualStateManager.VisualStateGroups>
+
+																<Grid Margin="0, 5, 12, 5">
+																	<Grid.ColumnDefinitions>
+																		<ColumnDefinition Width="24" />
+																		<ColumnDefinition Width="*" />
+																	</Grid.ColumnDefinitions>
+
+																	<Image Source="../Assets/checkbox_selected.png" x:Name="CheckMark" HorizontalAlignment="Center"
+																	       Height="12"
+																	       IsHitTestVisible="False" Stretch="Fill" Visibility="Collapsed" VerticalAlignment="Center"
+																	       Width="12" />
+
+																	<Image Source="../Assets/checkbox.png" x:Name="UnCheckMark" HorizontalAlignment="Center" Height="12"
+																	       IsHitTestVisible="False" Stretch="Fill" Visibility="Collapsed" VerticalAlignment="Center"
+																	       Width="12" />
+
+																	<ContentControl
+																		x:Name="ContentContainer"
+																		ContentTemplate="{TemplateBinding ContentTemplate}"
+																		Content="{TemplateBinding Content}"
+																		Grid.Column="1" Foreground="{TemplateBinding Foreground}"
+																		HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+																		Margin="12,0,0,0" Padding="{TemplateBinding Padding}"
+																		VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+																</Grid>
+															</Grid>
+														</ControlTemplate>
+													</Setter.Value>
+												</Setter>
+											</Style>
+										</CheckBox.Style>
+									</CheckBox>
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+						<StackPanel Grid.Column="1" VerticalAlignment="Bottom">
+							<StackPanel Visibility="{Binding UnitValueVisibility, Converter={StaticResource VisibilityValueConverter}}">
+								<TextBlock
+									Text="{Binding UnitType, FallbackValue=Unit-}"
+									FontSize="16"
+									Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+								<TextBox
+									InputScope="Number"
+									Margin="-15,-10"
+									Text="{Binding UnitValue, Mode=TwoWay}"
+									Opacity="0.7"
+									FontSize="16"
+									BorderBrush="{Binding Theme.Colors.ActivityItemBoxesColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}"
+									Background="{Binding Theme.Colors.ActivityItemBoxesColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}" />
+							</StackPanel>
+							<StackPanel Visibility="{Binding DistanceVisibility, Converter={StaticResource VisibilityValueConverter}}">
+								<TextBlock
+									Text="{Binding [Activity_Distance], FallbackValue=Distance-}"
+									FontSize="16"
+									Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+								<TextBox
+									InputScope="Number"
+									Margin="-15,-10"
+									Text="{Binding DistanceValue, Mode=TwoWay}"
+									Opacity="0.7"
+									FontSize="16"
+									BorderBrush="{Binding Theme.Colors.ActivityItemBoxesColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}"
+									Background="{Binding Theme.Colors.ActivityItemBoxesColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}" />
+							</StackPanel>
+						</StackPanel>
+					</Grid>
+					<StackPanel
+						Visibility="{Binding IsIntensityVisible, Converter={StaticResource VisibilityValueConverter}}"
+						Grid.Row="2">
+						<TextBlock
+							Text="{Binding [Activity_Intensity], FallbackValue=Intensity-}"
+							FontSize="16"
+							Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+
+						<Grid Height="20" Margin="0,5,0,0">
+							<TextBlock
+								Text="{Binding [Activity_Low], FallbackValue=Low}"
+								FontSize="14"
+								Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+
+							<TextBlock
+								Text="{Binding [Activity_High], FallbackValue=High-}"
+								FontSize="14"
+								HorizontalAlignment="Right"
+								Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+
+						</Grid>
+						<Slider Minimum="1" Maximum="5"
+                                Value="{Binding IntensitySelected, Mode=TwoWay}"
+						        Margin="-25,-20,-25,-30"
+						        Foreground="{Binding Theme.Colors.ImageSelectBackgroundColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E00}"
+						        Background="{Binding Theme.Colors.ImageBackgroundColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E00}" />
+					</StackPanel>
+					<Grid Grid.Row="3" HorizontalAlignment="Left">
+						<StackPanel VerticalAlignment="Bottom" Orientation="Horizontal"
+						            Height="40"
+						            Opacity="0.7"
+						            Background="{Binding ImageSelectBackground, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}"
+						            Tap="UploadImage">
+							<Image Source="/Assets/select_image.png" Width="30" Height="30" HorizontalAlignment="Left"
+							       Margin="5,0,0,0" />
+							<TextBlock
+								Margin="5,0,10,0"
+								VerticalAlignment="Center"
+								FontSize="14"
+								Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}"
+								Text="{Binding UploadImageText, FallbackValue=UploadImageText}" />
+						</StackPanel>
+					</Grid>
+					<!--Header="{Binding [Activity_Comments], FallbackValue=Comments-}"-->
+                    <StackPanel Grid.Row="4" Orientation="Vertical" Margin="0,10,0,0">
+                        <CheckBox
+							Content="{Binding [Activity_ShareToFacebook], FallbackValue=ShareToFacebook-}"
+							IsChecked="{Binding IsShareToFacebook, Mode=TwoWay}"
+							FontSize="16"
+							Visibility="{Binding ShowShareToFacebookCheckBox, Converter={StaticResource VisibilityValueConverter}}"
+							Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}"
+						/>
+                        <TextBlock
+							Text="{Binding [Activity_Comments], FallbackValue=Comments-}"
+							FontSize="14"
+							Foreground="{Binding Theme.Colors.ActivityItemPanelTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}" />
+						<TextBox
+							Text="{Binding Comments, Mode=TwoWay}"
+							Opacity="0.7"
+							FontSize="14"
+							Margin="-12"
+							BorderBrush="{Binding Theme.Colors.ActivityItemBoxesColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}"
+							Background="{Binding Theme.Colors.ActivityItemBoxesColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#D8D9DB}" />
+					</StackPanel>
+
+					<Grid Grid.Row="5">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Button
+							Margin="-12,0"
+							Command="{Binding SaveActivityCommand}"
+							Content="{Binding [Activity_Save], FallbackValue=Save-}"
+							Background="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+							Foreground="{Binding Theme.Colors.ActivityCancelButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#FFFFFF}"
+							BorderBrush="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+							HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+						<Button
+							Margin="-12,0"
+							Command="{Binding CancelCommand}"
+							Content="{Binding [Activity_Cancel], FallbackValue=Cancel-}"
+							Background="{Binding Theme.Colors.ActivityCancelButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#FFFFFF}"
+							Foreground="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+							BorderBrush="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+							Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+					</Grid>
+					<TextBlock Grid.Row="6" TextWrapping="Wrap" FontSize="11"
+						Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}">
+						<Run Text="{Binding [Activity_NoteLabel]}" FontWeight="Bold" /> 
+						<Run Text="{Binding NoteText}" />
+					</TextBlock>
+				</Grid>
+			</ScrollViewer>
+		</Grid>
+        <!-- LIVE RECORD PAGE -->
+        <Grid
+			Opacity="0.75"
+			Background="#3b3f44" Grid.Row="0" Grid.RowSpan="4"
+			Visibility="{Binding LiveRecordVisibility, Converter={StaticResource VisibilityValueConverter}}" />
+        <Grid
+			Background="#edebee"
+			Opacity="1"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Center"
+			Visibility="{Binding LiveRecordVisibility, Converter={StaticResource VisibilityValueConverter}}"
+			Grid.Row="0" Grid.RowSpan="4">
+            <StackPanel Margin="15">
+                <TextBlock
+					Text="{Binding TrainingTypeName, FallbackValue=TypeName}"
+					FontSize="18"
+					TextAlignment="Center"
+					Foreground="Black"/>
+                <TextBlock
+					Text="{Binding TrainingDescription, FallbackValue=TrainingDescription}"
+					FontSize="14"
+					TextAlignment="Center"
+					Visibility="{Binding DescriptionVisibility, Converter={StaticResource VisibilityValueConverter}}"
+					Foreground="Black" />
+                <Image x:Name="TimerImage" Source="../Assets/Clock/clock_animation_01.png" MaxWidth="250" />
+                <TextBlock
+					Text="{Binding LiveRecordTime, FallbackValue=00:00:00}"
+					FontSize="40"
+					TextAlignment="Center"
+					Foreground="Black"
+					 />
+                <Grid HorizontalAlignment="Stretch"
+				      Visibility="{Binding LiveRecordCancelButtonVisibility, Converter={StaticResource InvertedVisibilityValueConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button
+						Margin="-12,0"
+						Command="{Binding LiveRecordFinishCommand}"
+						Content="{Binding [Live_Record_Finish], FallbackValue=Finish-}"
+						Background="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+						Foreground="{Binding Theme.Colors.ActivityCancelButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#FFFFFF}"
+						BorderBrush="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+						HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <Button
+						Margin="-12,0"
+						Command="{Binding LiveRecordPauseResumeCommand}"
+						Content="{Binding PauseResumeButtonTitle, FallbackValue=PauseResume-}"
+						Background="{Binding PauseResumeButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#FFFFFF}"
+						Foreground="{Binding PauseResumeButtonTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+						BorderBrush="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+						Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                </Grid>
+                <Button
+					Margin="-12, 0"
+					Visibility="{Binding LiveRecordCancelButtonVisibility, Converter={StaticResource VisibilityValueConverter}}"
+					Command="{Binding LiveRecordStartCancelCommand}"
+					Content="{Binding StartCancelButtonTitle, FallbackValue=Start-}"
+
+					Background="{Binding PauseResumeButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+					Foreground="{Binding PauseResumeButtonTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#FFFFFF}"
+
+					BorderBrush="{Binding Theme.Colors.ActivitySaveButtonColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#163E54}"
+					HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                <TextBlock TextWrapping="Wrap" 
+						FontSize="11"
+						Foreground="{Binding Theme.Colors.ActivityItemTextColor, Converter={StaticResource NativeColorValueConverter}, FallbackValue=#000000}">
+						<Run Text="{Binding [Activity_NoteLabel], FallbackValue=Note: -}" FontWeight="Bold" /> 
+						<Run Text="{Binding LiveRecordNoteText, FallbackValue=NoteText-}" />
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+
+
+
+        <!-- BUSY INDICATOR -->
+		<telerikPrimitives:RadBusyIndicator
+			IsRunning="{Binding IsBusy}" AnimationStyle="AnimationStyle8"
+			Opacity="0.8"
+			Background="#edebee"
+			Foreground="{Binding Theme.Colors.BusyBackgroundColor, Converter={StaticResource NativeColorValueConverter}}"
+			Grid.Row="0" Grid.RowSpan="4" />
+	</Grid>
+</views:MvxPhonePage>

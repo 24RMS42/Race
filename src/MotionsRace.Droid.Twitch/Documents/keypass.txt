@@ -1,0 +1,14 @@
+Download (current)
+https://play.google.com/store/apps
+
+Published by
+companyraces.com
+
+Package name
+com.companyraces.twitch
+
+c2labs.twitch keystore
+password =
+dxcom400800rx
+
+Alias   c2labs.twitch

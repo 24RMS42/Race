@@ -1,0 +1,16 @@
+﻿Download (current)
+https://play.google.com/store/apps/details?id=com.companyraces.motionsrace
+
+Published by
+companyraces.com
+
+Package name
+com.companyraces.motionsrace
+
+c2labs keystore
+password =
+dxcom400800rx
+
+c2labs keystore file - see dropbox
+
+Alias   alias_name

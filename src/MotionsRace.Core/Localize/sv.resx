@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GLOBAL_AppName" xml:space="preserve">
+    <value>MotionsRace</value>
+  </data>
+  <data name="GLOBAL_Error" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="Login_Email" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+  <data name="Login_EmailRequired" xml:space="preserve">
+    <value>E-post krävs</value>
+  </data>
+  <data name="Login_NoActiveRaces" xml:space="preserve">
+    <value>Du är inloggad, men det finns ingen aktuell utmaning för dig</value>
+  </data>
+  <data name="Login_Password" xml:space="preserve">
+    <value>Lösenord</value>
+  </data>
+  <data name="Login_PasswordRequired" xml:space="preserve">
+    <value>Lösenord krävs</value>
+  </data>
+  <data name="Login_SelectRace" xml:space="preserve">
+    <value>Välj utmaning</value>
+  </data>
+  <data name="Login_SignIn" xml:space="preserve">
+    <value>LOGGA IN</value>
+  </data>
+  <data name="Login_SignInOAuth" xml:space="preserve">
+    <value>LOGGA IN {0}</value>
+  </data>
+  <data name="Login_WelcomeTo" xml:space="preserve">
+    <value>Välkommen till</value>
+  </data>
+  <data name="Main_Register" xml:space="preserve">
+    <value>REGISTRERA</value>
+  </data>
+  <data name="Welcome_SignIn" xml:space="preserve">
+    <value>Logga in</value>
+  </data>
+  <data name="Welcome_SignUp" xml:space="preserve">
+    <value>Ny användare</value>
+  </data>
+  <data name="Activity_ShareToFacebook" xml:space="preserve">
+    <value>Dela till Facebook</value>
+  </data>
+  <data name="Activity_RegisterActivity" xml:space="preserve">
+    <value>REGISTRERA AKTIVITET</value>
+  </data>
+  <data name="GLOBAL_NoInternetConnection" xml:space="preserve">
+    <value>Nätverk saknas</value>
+  </data>
+  <data name="Main_Ends" xml:space="preserve">
+    <value>Slutar</value>
+  </data>
+  <data name="Main_LastDayWas" xml:space="preserve">
+    <value>Sista dagen var</value>
+  </data>
+  <data name="Main_LogOut" xml:space="preserve">
+    <value>Logga ut</value>
+  </data>
+  <data name="Main_Points" xml:space="preserve">
+    <value>poäng</value>
+  </data>
+  <data name="Main_Settings" xml:space="preserve">
+    <value>Kontoinställningar (webbsidan)</value>
+  </data>
+  <data name="Main_StayInChallenge" xml:space="preserve">
+    <value>Stanna kvar i appen</value>
+  </data>
+  <data name="GLOBAL_Today" xml:space="preserve">
+    <value>Idag</value>
+  </data>
+  <data name="GLOBAL_Yesterday" xml:space="preserve">
+    <value>Igår</value>
+  </data>
+  <data name="Main_You" xml:space="preserve">
+    <value>Du</value>
+  </data>
+  <data name="Activity_Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="Activity_ChooseFromGallery" xml:space="preserve">
+    <value>Välj från kamerarulle</value>
+  </data>
+  <data name="Activity_Comments" xml:space="preserve">
+    <value>Kommentar</value>
+  </data>
+  <data name="Activity_Distance" xml:space="preserve">
+    <value>Distans (km)</value>
+  </data>
+  <data name="Activity_High" xml:space="preserve">
+    <value>Hög</value>
+  </data>
+  <data name="Activity_ImageChoosen" xml:space="preserve">
+    <value>Bild vald</value>
+  </data>
+  <data name="Activity_Intensity" xml:space="preserve">
+    <value>Ansträngning</value>
+  </data>
+  <data name="Activity_Low" xml:space="preserve">
+    <value>Låg</value>
+  </data>
+  <data name="Activity_Minutes" xml:space="preserve">
+    <value>Minuter</value>
+  </data>
+  <data name="Activity_NoteLabel" xml:space="preserve">
+    <value>Obs!</value>
+  </data>
+  <data name="Activity_NoteText" xml:space="preserve">
+    <value>Du kan tjäna in obegränsat med poäng per dag i denna utmaning</value>
+  </data>
+  <data name="Activity_Save" xml:space="preserve">
+    <value>Spara</value>
+  </data>
+  <data name="Activity_Steps" xml:space="preserve">
+    <value>Steg</value>
+  </data>
+  <data name="Activity_TakePhoto" xml:space="preserve">
+    <value>Ta bild</value>
+  </data>
+  <data name="Activity_TrainingSaved" xml:space="preserve">
+    <value>Aktivitet sparades</value>
+  </data>
+  <data name="Activity_UploadAnyImage" xml:space="preserve">
+    <value>Ladda upp valfri bild</value>
+  </data>
+  <data name="GLOBAL_Close" xml:space="preserve">
+    <value>Stäng</value>
+  </data>
+  <data name="GLOBAL_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="GLOBAL_Success" xml:space="preserve">
+    <value>Lyckades</value>
+  </data>
+  <data name="Main_NewsFeed_Activity1" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; registrerade {1} minuter {2}. &lt;b&gt;{3} poäng.&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_Activity2" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; registrerade {1}. &lt;b&gt;{2} poäng.&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_FORUMALL" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; postade i forumet &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_FORUMTEAM" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; postade i lagforumet &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_GOALSTREAM" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; satte upp ett mål: &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_MEDAL" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; erhöll bonusmedaljen &lt;b&gt;{1}&lt;/b&gt;. &lt;b&gt;{2} poäng.&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_MEDALNEWS1" xml:space="preserve">
+    <value>Bonus och medalj för &lt;b&gt;{0}&lt;/b&gt; kan nu väljas! {1} poäng.</value>
+  </data>
+  <data name="Main_NewsFeed_MEDALNEWS2" xml:space="preserve">
+    <value>Bonusmedaljen &lt;b&gt;{0}&lt;/b&gt; finns nu. {1} poäng. Förtjäna den nu!</value>
+  </data>
+  <data name="Main_NewsFeed_NEWS" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; nyheter från {1}</value>
+  </data>
+   <data name="GLOBAL_ERROR_API_NeedUpdate" xml:space="preserve">
+    <value>För att logga in behöver du uppdatera denna app till den senaste versionen.</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_LOGIN_FunBeatUserNotFoundOrPasswordIncorrect" xml:space="preserve">
+    <value>Login finns ej eller lösenordet är fel</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_CouldNotPostToFacebook" xml:space="preserve">
+    <value>Kan inte spara till Facebook</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_CouldNotSaveTraining" xml:space="preserve">
+    <value>Kan inte spara aktivitet</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_DailyLimitExceeded" xml:space="preserve">
+    <value>Max antal per dag har överskridits</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_TrainingPersonIDCannotDifferFromLoggedInPersonID" xml:space="preserve">
+    <value>Person för aktivitet kan inte vara annan än inloggad person.</value>
+  </data>
+  <data name="Activity_NoteTextDayMax" xml:space="preserve">
+    <value>Max poäng per dag är {0}.</value>
+  </data>
+  <data name="Activity_NoteTextWeekMax" xml:space="preserve">
+    <value>Max poäng per vecka är {0}. Varje natt beräknas din total för veckan och vissa aktiviteters poäng kan komma att justeras.</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Button_No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Button_Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Message" xml:space="preserve">
+    <value>Vill du avsluta appen?</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Title" xml:space="preserve">
+    <value>Avsluta</value>
+  </data>
+  <data name="Activity_Units_Fixed" xml:space="preserve">
+    <value>{0} poäng</value>
+  </data>
+  <data name="Activity_Units_Minutes" xml:space="preserve">
+    <value>{0} poäng/minut</value>
+  </data>
+  <data name="Activity_Units_Score" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Activity_Units_Steps" xml:space="preserve">
+    <value>{0} poäng/1000 steg</value>
+  </data>
+  <data name="Activity_EnterValidMinutes" xml:space="preserve">
+    <value>Vi behöver - antal minuter!</value>
+  </data>
+  <data name="Activity_EnterValidSteps" xml:space="preserve">
+    <value>Vi behöver - antal steg!</value>
+  </data>
+  <data name="Activity_SelectAtLeastOneDay" xml:space="preserve">
+    <value>Vilka dagar gjorde du detta?</value>
+  </data>
+  <data name="Activity_AllTrainingsSaved" xml:space="preserve">
+    <value>All din aktivitet har registrerats!</value>
+  </data>
+  <data name="Activity_SavedNotAllDays" xml:space="preserve">
+    <value>Aktiviteter registrerade. Vissa dagar har du nått maxtaket.</value>
+  </data>
+  <data name="Activity_TrainingCouldNotSave" xml:space="preserve">
+    <value>Kunde inte registrera aktiviteter för någon vald dag.</value>
+  </data>
+  <data name="Login_Splashtext" xml:space="preserve">
+    <value>Njut av god hälsa. Var aktiv och välj goda vanor.</value>
+  </data>
+  <data name="Main_TryToRefresh" xml:space="preserve">
+    <value>Försök igen</value>
+  </data>
+  <data name="Activity_TrainingLimitExceeded1Day" xml:space="preserve">
+    <value>Denna aktivitet redan registrerad denna dag!</value>
+  </data>
+  <data name="Activity_TrainingLimitExceededAllDays" xml:space="preserve">
+    <value>Denna aktivitet redan registrerad alla dagar!</value>
+  </data>
+  <data name="Activity_LiveRecord" xml:space="preserve">
+    <value>Räkna minuter NU!</value>
+  </data>
+  <data name="Live_Record_Start" xml:space="preserve">
+    <value>STARTA</value>
+  </data>
+  <data name="Main_NoDetailInformation" xml:space="preserve">
+    <value>Mer information finns inte här. Kolla utmaningens webbplats</value>
+  </data>
+  <data name="Main_ReadOnSite" xml:space="preserve">
+    <value>Läs mer</value>
+  </data>
+  <data name="Live_Record_Cancel" xml:space="preserve">
+    <value>AVBRYT</value>
+  </data>
+  <data name="Live_Record_Finish" xml:space="preserve">
+    <value>FÄRDIG</value>
+  </data>
+  <data name="Live_Record_Pause" xml:space="preserve">
+    <value>PAUSA</value>
+  </data>
+  <data name="Main_NewsDetail_FORUMALL" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; postade i forumet &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsDetail_FORUMTEAM" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; postade i lagforumet &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_MESSAGE" xml:space="preserve">
+    <value>Meddelande från &lt;b&gt;{0}&lt;/b&gt;</value>
+  </data>
+  <data name="LiveRecord_NoteLabel1" xml:space="preserve">
+    <value>Du har ännu inte nått 1 minut</value>
+  </data>
+  <data name="LiveRecord_NoteLabel2" xml:space="preserve">
+    <value>Minst {0} minuter krävs för att få poäng.</value>
+  </data>
+  <data name="Live_Record_Resume" xml:space="preserve">
+    <value>FORTSÄTT</value>
+  </data>
+  <data name="GLOBAL_Restart" xml:space="preserve">
+    <value>Starta om</value>
+  </data>
+  <data name="Main_NewsFeedAll" xml:space="preserve">
+    <value>Visa nyhetsflöde</value>
+  </data>
+  <data name="Main_NewsFeedPersonal" xml:space="preserve">
+    <value>Visa enbart mina aktiviteter</value>
+  </data>
+  <data name="Main_NewsFeed_PERSONALMESSAGE" xml:space="preserve">
+    <value>Personligt meddelande från &lt;b&gt;{0}&lt;/b&gt;</value>
+  </data>
+  <data name="MAIN_Restart_after_crash" xml:space="preserve">
+    <value>Starta om denna app</value>
+  </data>
+  <data name="GLOBAL_Confirm_Dialog_Title" xml:space="preserve">
+    <value>Bekräfta</value>
+  </data>
+  <data name="LiveRecord_ConfirmExit" xml:space="preserve">
+    <value>Vill du avsluta tidräknaren?</value>
+  </data>
+  <data name="BusyIndicatorContent" xml:space="preserve">
+    <value>laddar...</value>
+  </data>
+  <data name="ListPullToRefresh" xml:space="preserve">
+    <value>Dra ned för att uppdatera</value>
+  </data>
+  <data name="ListPullToRefreshLoading" xml:space="preserve">
+    <value>laddar</value>
+  </data>
+  <data name="ListPullToRefreshTime" xml:space="preserve">
+    <value>senast uppdaterad: {0:H:mm}</value>
+  </data>
+  <data name="ListReleaseToRefresh" xml:space="preserve">
+    <value>släpp för att uppdatera</value>
+  </data>
+  <data name="Login_ForgotPassword" xml:space="preserve">
+    <value>Glömt lösenordet?</value>
+  </data>
+  <data name="GLOBAL_Server_not_available" xml:space="preserve">
+    <value>Servern kan ej nås - kontrollera din nätverksanslutning</value>
+  </data>
+  <data name="Main_Close" xml:space="preserve">
+    <value>Stäng</value>
+  </data>
+  <data name="Activity_PictureError" xml:space="preserve">
+    <value>Problem med att spara bild</value>
+  </data>
+  <data name="Login_SplashtextAtea" xml:space="preserve">
+    <value>Var aktiv och var med och bidra</value>
+  </data>
+  <data name="Login_SplashtextNorden" xml:space="preserve">
+    <value>Success is connected to action. Successful people keep moving. 
+-Conrad Hilton</value>
+  </data>
+  <data name="Activity_RegisterFavotieActivity" xml:space="preserve">
+    <value>FAVORITAKTIVITETER</value>
+  </data>
+  <data name="Main_Favorit" xml:space="preserve">
+    <value>FAVORITER</value>
+  </data>
+  <data name="Main_MyActivities" xml:space="preserve">
+    <value>Endast mina egna aktiviteter</value>
+  </data>
+</root>

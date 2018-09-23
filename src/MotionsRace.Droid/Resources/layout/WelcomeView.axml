@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+        <LinearLayout
+            android:id="@+id/multiImageLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.85">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/relativeLayout1">
+                <cc.CustomGallery
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/welcomGallery"
+                    android:background="#ff000000" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/linearLayout1">
+                    <cc.Ellipse
+                        android:id="@+id/ellipse1"
+                        android:layout_width="26dp"
+                        android:layout_height="match_parent"
+                        android:background="#ffff0000"
+                        android:layout_margin="3dp" />
+                    <cc.Ellipse
+                        android:id="@+id/ellipse2"
+                        android:layout_width="26dp"
+                        android:layout_height="match_parent"
+                        android:background="#ffff0000"
+                        android:layout_margin="3dp" />
+                    <cc.Ellipse
+                        android:id="@+id/ellipse3"
+                        android:layout_width="26dp"
+                        android:layout_height="match_parent"
+                        android:background="#ffff0000"
+                        android:layout_margin="3dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#909090"
+            android:orientation="horizontal"
+            android:layout_weight="0.15"
+            android:weightSum="1">
+            <Button
+                android:id="@+id/signIn"
+                android:text="text"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:textSize="26dp"
+                local:MvxBind="Text [Welcome_SignUp]; Click SignUpCommand; BackgroundColor NativeColor(Theme.Colors.WelcomeSignUpColor); TextColor  NativeColor(Theme.Colors.WelcomeSignUpTextColor)" />
+            <Button
+                android:id="@+id/signUp"
+                android:text="text"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:textSize="26dp"
+                local:MvxBind="Text [Welcome_SignIn]; Click SignInCommand; BackgroundColor NativeColor(Theme.Colors.WelcomeSignInColor); TextColor  NativeColor(Theme.Colors.WelcomeSignInTextColor)" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

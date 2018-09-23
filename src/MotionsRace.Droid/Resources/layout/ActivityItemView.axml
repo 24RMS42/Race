@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        local:MvxBind="BackgroundColor NativeColor(Theme.Colors.MainColor)">
+        <include
+            android:id="@+id/UiHeader"
+            layout="@layout/MainHederFragment"
+            android:layout_width="match_parent"
+            android:layout_gravity="top" />
+        <TextView
+            android:text="Test2"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:textColor="#FF000000"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:background="#FFFFFFFF"
+            local:MvxBind="Text [Activity_RegisterActivity]; TextColor NativeColor(Theme.Colors.TextPageTitleColor); BackgroundColor NativeColor(Theme.Colors.PageTitleColor)" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:scrollbarThumbVertical="@drawable/custom_scrollbar_thumbvertical_main"
+            android:scrollbarTrackVertical="@drawable/custom_scrollbar_trackvertical_main">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="BackgroundColor NativeColor(Theme.Colors.ActivityItemBackgroundColor)">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:alpha="0.7"
+                    local:MvxBind="BackgroundColor NativeColor(Theme.Colors.ActivityItemPanelColor)">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="test1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF000000"
+                            android:layout_gravity="center|left"
+                            android:gravity="center|left"
+                            android:textSize="16dp"
+                            local:MvxBind="Text TrainingTypeName; TextColor NativeColor(Theme.Colors.ActivityItemPanelTextColor)" />
+                        <TextView
+                            android:text="test1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF000000"
+                            android:layout_gravity="center|left"
+                            android:gravity="center|left"
+                            android:textSize="12dp"
+                            local:MvxBind="Text TrainingDescription; Visibility DescriptionVisibility, Converter=Visibility; TextColor NativeColor(Theme.Colors.ActivityItemPanelTextColor)" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:minHeight="65dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:id="@+id/checkboxescontainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="0.6">
+                        <cc.MvxListViewNoScroll
+                            android:id="@+id/checkboxdates"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:divider="@null"
+                            android:dividerHeight="0dp"
+                            local:MvxItemTemplate="@layout/activitycheckboxitem"
+                            local:MvxBind="ItemsSource DateCheckBoxes" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.4">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            local:MvxBind="Visibility UnitValueVisibility, Converter=Visibility">
+                            <TextView
+                                android:text="Minutes"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF000000"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="16dp"
+                                local:MvxBind="Text UnitType; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                            <EditText
+                                android:textColorHint="#FFFFFF"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:padding="2dp"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="16dp"
+                                android:inputType="number"
+                                android:textColor="#FF000000"
+                                android:alpha="0.7"
+                                local:MvxBind="Text UnitValue; BackgroundColor NativeColor(Theme.Colors.ActivityItemBoxesColor)" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            local:MvxBind="Visibility DistanceVisibility, Converter=Visibility">
+                            <TextView
+                                android:text=""
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF000000"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="16dp"
+                                local:MvxBind="Text [Activity_Distance]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                            <EditText
+                                android:textColorHint="#FFFFFF"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:padding="2dp"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="16dp"
+                                android:inputType="number"
+                                android:textColor="#FF000000"
+                                android:alpha="0.7"
+                                local:MvxBind="Text DistanceValue; BackgroundColor NativeColor(Theme.Colors.ActivityItemBoxesColor)" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    local:MvxBind="Visibility IsIntensityVisible, Converter=Visibility">
+                    <TextView
+                        android:text=""
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF000000"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:textSize="16dp"
+                        local:MvxBind="Text [Activity_Intensity]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="Low"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF000000"
+                            android:layout_gravity="center|left"
+                            android:gravity="center|left"
+                            android:layout_marginLeft="3dp"
+                            android:textSize="14dp"
+                            local:MvxBind="Text [Activity_Low]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                        <TextView
+                            android:text="High"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF000000"
+                            android:layout_gravity="center|right"
+                            android:gravity="center|right"
+                            android:layout_marginRight="3dp"
+                            android:textSize="14dp"
+                            local:MvxBind="Text [Activity_High]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <GridView
+                            android:id="@+id/IntensityGridBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="5" />
+                        <GridView
+                            android:id="@+id/IntensityGridOrange"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="5" />
+                        <SeekBar
+                            android:id="@+id/intensity_slider"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="4dp"
+                            android:max="4"
+                            android:progress="0"
+                            android:secondaryProgress="0"
+                            android:minHeight="10dp"
+                            android:maxHeight="10dp"
+                            android:progressDrawable="@drawable/intensity_progress"
+                            android:thumb="@drawable/intensity_circle"
+                            local:MvxBind="Progress IntensitySelected" />
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:id="@+id/intensitytap1"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.15" />
+                            <LinearLayout
+                                android:id="@+id/intensitytap2"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.23" />
+                            <LinearLayout
+                                android:id="@+id/intensitytap3"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.24" />
+                            <LinearLayout
+                                android:id="@+id/intensitytap4"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.23" />
+                            <LinearLayout
+                                android:id="@+id/intensitytap5"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.15" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:alpha="0.7"
+                        local:MvxBind="Click UploadImageCommand; BackgroundColor NativeColor(ImageSelectBackground)">
+                        <ImageView
+                            android:id="@+id/imageselected"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/select_image"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp" />
+                        <TextView
+                            android:text="Upload any image"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF000000"
+                            android:layout_gravity="center|left"
+                            android:gravity="center|left"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="16dp"
+                            local:MvxBind="Text UploadImageText" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:text="sharetofacebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp"
+                        android:button="@drawable/checkbox_selector"
+                        android:textColor="#FF000000"
+                        android:textSize="16dp"
+                        android:paddingLeft="20dp"
+                        local:MvxBind="Checked IsShareToFacebook; Text [Activity_ShareToFacebook]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor); Visibility ShowShareToFacebookCheckBox, Converter=Visibility" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF000000"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:textSize="14dp"
+                        local:MvxBind="Text [Activity_Comments]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                    <EditText
+                        android:textColorHint="#FFFFFF"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:isScrollContainer="true"
+                        android:minHeight="30dp"
+                        android:inputType="textMultiLine"
+                        android:padding="2dp"
+                        android:textSize="14dp"
+                        android:textColor="#FF000000"
+                        android:alpha="0.7"
+                        local:MvxBind="Text Comments; BackgroundColor NativeColor(Theme.Colors.ActivityItemBoxesColor)" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:padding="2dp"
+                    local:MvxBind="BackgroundColor NativeColor(Theme.Colors.ActivitySaveButtonColor)">
+                    <Button
+                        android:id="@+id/save"
+                        android:text=""
+                        android:layout_height="50dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:background="#FF163e55"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="20dp"
+                        local:MvxBind="Text [Activity_Save]; Click SaveActivityCommand; BackgroundColor NativeColor(SaveButtonColor)" />
+                    <Button
+                        android:id="@+id/cancel"
+                        android:text=""
+                        android:layout_height="50dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:background="#FFFFFFFF"
+                        android:textColor="#FF000000"
+                        android:textSize="20dp"
+                        local:MvxBind="Text [Activity_Cancel]; Click CancelCommand; BackgroundColor NativeColor(Theme.Colors.ActivityCancelButtonColor)" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                    <TextView
+                        android:text="Note:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF000000"
+                        android:layout_gravity="right|top"
+                        android:gravity="right|top"
+                        android:textSize="12dp"
+                        android:layout_weight="0.1"
+                        android:paddingRight="2dp"
+                        local:MvxBind="Text [Activity_NoteLabel]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF000000"
+                        android:layout_gravity="left|top"
+                        android:gravity="left|top"
+                        android:textSize="11dp"
+                        android:alpha="0.7"
+                        android:layout_weight="0.9"
+                        local:MvxBind="Text NoteText; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:background="#edebee"
+        android:clickable="true"
+        android:alpha="0.8"
+        local:MvxBind="Visibility IsBusy, Converter=Visibility"
+        android:id="@+id/waitLayout">
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:alpha="1" />
+    </LinearLayout>
+<!-- LIVE RECORD PAGE -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        local:MvxBind="Visibility LiveRecordVisibility, Converter=Visibility">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/rounded_container_border"
+            android:alpha="0.75"
+            android:clickable="true"
+            local:MvxBind="Click LiveRecordCancelCommand;" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:background="#edebee"
+            android:alpha="1"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                local:MvxBind="BackgroundColor NativeColor(Theme.Colors.ActivityItemPanelColor)">
+                <TextView
+                    android:text="TrainingTypeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    local:MvxBind="Text TrainingTypeName; TextColor NativeColor(Theme.Colors.ActivityItemPanelTextColor)"
+                    android:textStyle="bold" />
+                <TextView
+                    android:text="TrainingDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    local:MvxBind="Text TrainingDescription; Visibility DescriptionVisibility, Converter=Visibility; TextColor NativeColor(Theme.Colors.ActivityItemPanelTextColor)" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivAnimateClock"
+                    android:src="@drawable/clock_animation_01"
+                    android:cropToPadding="true"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:text="00:00:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:gravity="center_horizontal"
+                    android:textSize="40dp"
+                    local:MvxBind="Text LiveRecordTime; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)"
+                    android:textColor="#000000" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                local:MvxBind="BackgroundColor NativeColor(Theme.Colors.ActivitySaveButtonColor)"
+                android:padding="2dp">
+                <LinearLayout
+                    android:id="@+id/llPauseFinish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    local:MvxBind="Visibility InvertedVisibility(LiveRecordCancelButtonVisibility), Converter=Visibility">
+                    <Button
+                        android:id="@+id/btnFinish"
+                        android:layout_weight="0.5"
+                        android:background="#FF163e55"
+                        android:textColor="#FFFFFFFF"
+                        android:layout_height="50dp"
+                        android:textSize="20dp"
+                        android:text="FINISH"
+                        local:MvxBind="Text [Live_Record_Finish]; Click LiveRecordFinishCommand; BackgroundColor NativeColor(Theme.Colors.ActivitySaveButtonColor);"
+                        android:layout_width="match_parent" />
+                    <Button
+                        android:id="@+id/btnPauseResume"
+                        android:layout_weight="0.5"
+                        android:background="#FF163e55"
+                        android:textColor="#FFFFFFFF"
+                        android:layout_height="50dp"
+                        android:textSize="20dp"
+                        android:text="START"
+                        local:MvxBind="Text PauseResumeButtonTitle; Click LiveRecordPauseResumeCommand; BackgroundColor NativeColor(PauseResumeButtonColor); TextColor NativeColor(PauseResumeButtonTextColor)"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:background="#FFFFFFFF"
+                    android:textColor="#FF163e55"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:text="CANCEL"
+                    local:MvxBind="Text StartCancelButtonTitle; Click LiveRecordStartCancelCommand; BackgroundColor NativeColor(PauseResumeButtonColor); TextColor NativeColor(PauseResumeButtonTextColor); Visibility LiveRecordCancelButtonVisibility, Converter=Visibility" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                local:MvxBind="Visibility LiveRecordNoteVisibility, Converter=Visibility">
+                <TextView
+                    android:text="Note:"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF000000"
+                    android:layout_gravity="right|top"
+                    android:gravity="right|top"
+                    android:textSize="12dp"
+                    android:layout_weight="0.1"
+                    local:MvxBind="Text [Activity_NoteLabel]; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)"
+                    android:paddingRight="2dp" />
+                <TextView
+                    android:text="You have not yet reached 1 minute. Minimum 15 minutes are required to receive points."
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF000000"
+                    android:layout_gravity="left|top"
+                    android:gravity="left|top"
+                    android:textSize="11dp"
+                    android:alpha="0.7"
+                    android:layout_weight="0.9"
+                    local:MvxBind="Text LiveRecordNoteText; TextColor NativeColor(Theme.Colors.ActivityItemTextColor)" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

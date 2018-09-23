@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        local:MvxBind="BackgroundColor NativeColor(Theme.Colors.PageTitleColor)">
+        <include
+            android:id="@+id/UiHeader"
+            layout="@layout/MainHederFragment"
+            android:layout_width="match_parent"
+            android:layout_gravity="top" />
+        <TextView
+            android:text="Test1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:textColor="#FF000000"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            local:MvxBind="TextColor NativeColor(Theme.Colors.TextPageTitleColor); Text [Activity_RegisterFavotieActivity];" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="true"
+                local:MvxBind="BackgroundColor NativeColor(Theme.Colors.ActivityTypesPanelColor);  Click TapLogoCommand">
+                <MvxListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:divider="@android:color/transparent"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="vertical"
+                    android:clickable="true"
+                    android:scrollbarThumbVertical="@drawable/custom_scrollbar_thumbvertical_main"
+                    android:scrollbarTrackVertical="@drawable/custom_scrollbar_trackvertical_main"
+                    android:headerDividersEnabled="false"
+                    android:footerDividersEnabled="false"
+                    android:dividerHeight="5dp"
+                    local:MvxItemTemplate="@layout/activityitem"
+                    local:MvxBind="ItemsSource TrainingCategoryItems; SelectedItem TrainingCategoryItemsSelected; ItemClick TrainingCategoryItemsSelectedCommand;       Click TapLogoCommand" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:background="#edebee"
+        android:alpha="0.8"
+        local:MvxBind="Visibility IsBusy, Converter=Visibility">
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:alpha="1" />
+    </LinearLayout>
+</RelativeLayout>

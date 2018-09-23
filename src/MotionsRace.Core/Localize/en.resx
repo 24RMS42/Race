@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GLOBAL_AppName" xml:space="preserve">
+    <value>MotionsRace</value>
+  </data>
+  <data name="GLOBAL_Error" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="Login_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Login_EmailRequired" xml:space="preserve">
+    <value>Email required</value>
+  </data>
+  <data name="Login_NoActiveRaces" xml:space="preserve">
+    <value>Logged in, but no ongoing challenge found</value>
+  </data>
+  <data name="Login_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Login_PasswordRequired" xml:space="preserve">
+    <value>Password required</value>
+  </data>
+  <data name="Login_SelectRace" xml:space="preserve">
+    <value>Select challenge</value>
+  </data>
+  <data name="Login_SignIn" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="Login_SignInOAuth" xml:space="preserve">
+    <value>SIGN IN {0}</value>
+  </data>
+  <data name="Login_WelcomeTo" xml:space="preserve">
+    <value>Welcome to</value>
+  </data>
+  <data name="Main_Register" xml:space="preserve">
+    <value>REGISTER</value>
+  </data>
+  <data name="Welcome_SignIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="Welcome_SignUp" xml:space="preserve">
+    <value>I'm new</value>
+  </data>
+  <data name="Activity_RegisterActivity" xml:space="preserve">
+    <value>REGISTER ACTIVITY</value>
+  </data>
+  <data name="GLOBAL_NoInternetConnection" xml:space="preserve">
+    <value>No network connection</value>
+  </data>
+  <data name="Main_Ends" xml:space="preserve">
+    <value>Ends</value>
+  </data>
+  <data name="Main_LastDayWas" xml:space="preserve">
+    <value>Last day was</value>
+  </data>
+  <data name="Main_LogOut" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Main_Points" xml:space="preserve">
+    <value>points</value>
+  </data>
+  <data name="Main_Settings" xml:space="preserve">
+    <value>Account settings (website)</value>
+  </data>
+  <data name="Main_StayInChallenge" xml:space="preserve">
+    <value>Stay in app</value>
+  </data>
+  <data name="GLOBAL_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="GLOBAL_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="Main_You" xml:space="preserve">
+    <value>You</value>
+  </data>
+  <data name="Activity_ShareToFacebook" xml:space="preserve">
+    <value>Share to Facebook</value>
+  </data>
+  <data name="Activity_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Activity_ChooseFromGallery" xml:space="preserve">
+    <value>Choose from gallery</value>
+  </data>
+  <data name="Activity_Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Activity_Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Activity_High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Activity_ImageChoosen" xml:space="preserve">
+    <value>Image choosen</value>
+  </data>
+  <data name="Activity_Intensity" xml:space="preserve">
+    <value>Intensity</value>
+  </data>
+  <data name="Activity_Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Activity_Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="Activity_NoteLabel" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Activity_NoteText" xml:space="preserve">
+    <value>There is no limit to the points you can earn per day!</value>
+  </data>
+  <data name="Activity_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Activity_Steps" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="Activity_TakePhoto" xml:space="preserve">
+    <value>Take photo</value>
+  </data>
+  <data name="Activity_TrainingSaved" xml:space="preserve">
+    <value>Training saved</value>
+  </data>
+  <data name="Activity_UploadAnyImage" xml:space="preserve">
+    <value>Upload any image</value>
+  </data>
+  <data name="GLOBAL_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="GLOBAL_Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="GLOBAL_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Main_NewsFeed_Activity1" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; registered {1} minutes of {2}. &lt;b&gt;{3} points.&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_Activity2" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; registered {1}. &lt;b&gt;{2} points.&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_FORUMALL" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; posted to challenge forum &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_FORUMTEAM" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; posted to your team discussion &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_GOALSTREAM" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; set goal &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_MEDAL" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; was awarded bonus medal &lt;b&gt;{1}&lt;/b&gt;. {2} points.</value>
+  </data>
+  <data name="Main_NewsFeed_MEDALNEWS1" xml:space="preserve">
+    <value>Bonus and medal for &lt;b&gt;{0}&lt;/b&gt; can now be chosen! {1} points.</value>
+  </data>
+  <data name="Main_NewsFeed_MEDALNEWS2" xml:space="preserve">
+    <value>The bonus medal &lt;b&gt;{0}&lt;/b&gt; is available. {1} points. Earn it now!</value>
+  </data>
+  <data name="Main_NewsFeed_NEWS" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; News posted by {1}</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_NeedUpdate" xml:space="preserve">
+    <value>To log in, you must update this app to the most recent version.</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_LOGIN_FunBeatUserNotFoundOrPasswordIncorrect" xml:space="preserve">
+    <value>User not found or password incorrect</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_CouldNotPostToFacebook" xml:space="preserve">
+    <value>Could not post to facebook</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_CouldNotSaveTraining" xml:space="preserve">
+    <value>Could not save activity</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_DailyLimitExceeded" xml:space="preserve">
+    <value>Daily limit exceeded</value>
+  </data>
+  <data name="GLOBAL_ERROR_API_SAVE_TRAINING_TrainingPersonIDCannotDifferFromLoggedInPersonID" xml:space="preserve">
+    <value>Person for activity cannot be different from logged in person.</value>
+  </data>
+  <data name="Activity_NoteTextDayMax" xml:space="preserve">
+    <value>The maximum points per day is {0}.  To ensure this activity is considered for points (and some medals), begin your note with word prio.</value>
+  </data>
+  <data name="Activity_NoteTextWeekMax" xml:space="preserve">
+    <value>The maximum points per week is {0}. Each night individual points may be adjusted - which is shown in your calendar. To ensure this activity is considered for points (and some medals), begin your note with word prio.</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Button_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Button_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Message" xml:space="preserve">
+    <value>Do you want to exit this app?</value>
+  </data>
+  <data name="GLOBAL_Exit_Dialog_Title" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Activity_Units_Fixed" xml:space="preserve">
+    <value>{0} points</value>
+  </data>
+  <data name="Activity_Units_Minutes" xml:space="preserve">
+    <value>{0} points/minute</value>
+  </data>
+  <data name="Activity_Units_Score" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Activity_Units_Steps" xml:space="preserve">
+    <value>{0} points/1000 steps</value>
+  </data>
+  <data name="Activity_EnterValidMinutes" xml:space="preserve">
+    <value>We need to know number of minutes!</value>
+  </data>
+  <data name="Activity_EnterValidSteps" xml:space="preserve">
+    <value>We need to know number of steps!</value>
+  </data>
+  <data name="Activity_SelectAtLeastOneDay" xml:space="preserve">
+    <value>What days did you do this?</value>
+  </data>
+  <data name="Activity_AllTrainingsSaved" xml:space="preserve">
+    <value>All your activity registered!</value>
+  </data>
+  <data name="Activity_SavedNotAllDays" xml:space="preserve">
+    <value>Activity registered. Some days you have reached the daily limit.</value>
+  </data>
+  <data name="Activity_TrainingCouldNotSave" xml:space="preserve">
+    <value>Could not register activity any selected days.</value>
+  </data>
+  <data name="Login_Splashtext" xml:space="preserve">
+    <value>Enjoy the glow of good health. Exercise and choose good habits.</value>
+  </data>
+  <data name="Main_TryToRefresh" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="Activity_TrainingLimitExceeded1Day" xml:space="preserve">
+    <value>This activity and day already registered!</value>
+  </data>
+  <data name="Activity_TrainingLimitExceededAllDays" xml:space="preserve">
+    <value>This activity already registered for all days!</value>
+  </data>
+  <data name="Activity_LiveRecord" xml:space="preserve">
+    <value>Record NOW!</value>
+  </data>
+  <data name="Live_Record_Start" xml:space="preserve">
+    <value>START</value>
+  </data>
+  <data name="Live_Record_Finish" xml:space="preserve">
+    <value>FINISH</value>
+  </data>
+  <data name="Main_NoDetailInformation" xml:space="preserve">
+    <value>There is no more information here. Please check the challenge web.</value>
+  </data>
+  <data name="Main_ReadOnSite" xml:space="preserve">
+    <value>Read more</value>
+  </data>
+  <data name="Main_NewsDetail_FORUMALL" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; posted to challenge forum &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsDetail_FORUMTEAM" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; posted to your team discussion &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Main_NewsFeed_MESSAGE" xml:space="preserve">
+    <value>Message from &lt;b&gt;{0}&lt;/b&gt;</value>
+  </data>
+  <data name="Live_Record_Pause" xml:space="preserve">
+    <value>PAUSE</value>
+  </data>
+  <data name="Live_Record_Resume" xml:space="preserve">
+    <value>RESUME</value>
+  </data>
+  <data name="Live_Record_Cancel" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="Main_NewsFeed_PERSONALMESSAGE" xml:space="preserve">
+    <value>Personal message from &lt;b&gt;{0}&lt;/b&gt;</value>
+  </data>
+  <data name="LiveRecord_NoteLabel1" xml:space="preserve">
+    <value>You have not yet reached 1 minute.</value>
+  </data>
+  <data name="LiveRecord_NoteLabel2" xml:space="preserve">
+    <value>Minimum {0} minutes are required to gain points.</value>
+  </data>
+  <data name="GLOBAL_Restart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="Main_NewsFeedAll" xml:space="preserve">
+    <value>Show newsfeed</value>
+  </data>
+  <data name="Main_NewsFeedPersonal" xml:space="preserve">
+    <value>Show my activities only</value>
+  </data>
+  <data name="MAIN_Restart_after_crash" xml:space="preserve">
+    <value>Restart this app</value>
+  </data>
+  <data name="GLOBAL_Confirm_Dialog_Title" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="LiveRecord_ConfirmExit" xml:space="preserve">
+    <value>Do you want exit from timer?</value>
+  </data>
+  <data name="BusyIndicatorContent" xml:space="preserve">
+    <value>loading...</value>
+  </data>
+  <data name="ListPullToRefresh" xml:space="preserve">
+    <value>pull to refresh</value>
+  </data>
+  <data name="ListPullToRefreshLoading" xml:space="preserve">
+    <value>loading</value>
+  </data>
+  <data name="ListPullToRefreshTime" xml:space="preserve">
+    <value>last refresh time: {0:H:mm}</value>
+  </data>
+  <data name="ListReleaseToRefresh" xml:space="preserve">
+    <value>release to refresh</value>
+  </data>
+  <data name="GLOBAL_Server_not_available" xml:space="preserve">
+    <value>Server not available, check your network connection</value>
+  </data>
+  <data name="Main_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Login_ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="Activity_PictureError" xml:space="preserve">
+    <value>Problem saving image</value>
+  </data>
+  <data name="Login_SplashtextAtea" xml:space="preserve">
+    <value>Be active - and contribute</value>
+  </data>
+  <data name="Login_SplashtextNorden" xml:space="preserve">
+    <value>Success is connected to action. Successful people keep moving. 
+-Conrad Hilton</value>
+  </data>
+  <data name="Activity_RegisterFavotieActivity" xml:space="preserve">
+    <value>FAVOURITE ACTIVITIES</value>
+  </data>
+  <data name="Main_Favorit" xml:space="preserve">
+    <value>FAVOURITES</value>
+  </data>
+  <data name="Main_MyActivities" xml:space="preserve">
+    <value>My activities</value>
+  </data>
+</root>

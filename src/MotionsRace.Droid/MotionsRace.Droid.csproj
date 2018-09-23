@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55A61091-911B-47D6-A846-6809044B5EDC}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MotionsRace.Droid</RootNamespace>
+    <AssemblyName>MotionsRace.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <ReleaseVersion>58</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidTlsProvider></AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <Debugger>Xamarin</Debugger>
+    <AndroidSigningKeyStore>Documents\c2labs.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>dxcom400800rx</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>alias_name</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>dxcom400800rx</AndroidSigningKeyPass>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <DebugType>full</DebugType>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseTwitch|AnyCPU'">
+    <OutputPath>bin\ReleaseTwitch\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TWITCH</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseAtea|AnyCPU'">
+    <OutputPath>bin\ReleaseAtea\</OutputPath>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="MvvmCross.Platform.Droid">
+      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Visibility.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility.Droid">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Visibility.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\..\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Async">
+      <HintPath>..\..\packages\SQLite.Net.Async-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinAndroid">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.1.1\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Sqlite">
+      <HintPath>..\..\packages\MvvmCross.Plugin.SQLitePCL.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Sqlite.Droid">
+      <HintPath>..\..\packages\MvvmCross.Plugin.SQLitePCL.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Sqlite.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PictureChooser">
+      <HintPath>..\..\packages\MvvmCross.Plugin.PictureChooser.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.PictureChooser.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PictureChooser.Droid">
+      <HintPath>..\..\packages\MvvmCross.Plugin.PictureChooser.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.PictureChooser.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Messenger.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Json">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Json.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.Droid">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.File.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color.Droid">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.Color.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Droid">
+      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Droid.Shared">
+      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Droid">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\..\packages\Xamarin.Insights.1.11.1\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="AndHUD">
+      <HintPath>..\..\packages\AndHUD.1.2.0\lib\MonoAndroid\AndHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.1.6.2\lib\monoandroid\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.Support.Android">
+      <HintPath>..\..\packages\Acr.Support.2.1.0\lib\MonoAndroid10\Acr.Support.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.0.1\lib\MonoAndroid10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.0.1\lib\MonoAndroid10\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.Droid">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.4.2.2\lib\MonoAndroid\MvvmCross.Plugins.DownloadCache.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.RecyclerView.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Design.23.4.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ScaleImageView.cs" />
+    <Compile Include="Converters\StringToIntValueConverter.cs" />
+    <Compile Include="Converters\TrainingCategoryImageValueConverter.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\XamarinInsights.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="Views\FrequentTrainingView.cs" />
+    <Compile Include="Views\BaseActivity.cs" />
+    <Compile Include="Views\ImageViewerView.cs" />
+    <Compile Include="Views\MainView.cs" />
+    <Compile Include="Web References\MotionsRaceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WelcomeView.cs" />
+    <Compile Include="Views\SignInView.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\MessageService.cs" />
+    <Compile Include="Services\PlatformService.cs" />
+    <Compile Include="Views\ActivityTypesView.cs" />
+    <Compile Include="Adapters\GalleryAdapter.cs" />
+    <Compile Include="Controls\HorizontalListView.cs" />
+    <Compile Include="Controls\BindableHorizontalListView.cs" />
+    <Compile Include="Controls\MvxBindableListViewHelpers.cs" />
+    <Compile Include="Views\ActivityItemView.cs" />
+    <Compile Include="Converters\FromHtmlValueConverter.cs" />
+    <Compile Include="Controls\MvxListViewNoScroll.cs" />
+    <Compile Include="Controls\Ellipse.cs" />
+    <Compile Include="Controls\CustomGallery.cs" />
+    <Compile Include="Converters\InvertBoolConverter.cs" />
+    <Compile Include="Controls\IntensityBackgroundImageAdaptor.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Services\ImageResizeService.cs" />
+    <Compile Include="Services\WebService.cs" />
+    <Compile Include="ApiClient\MotionsRaceClient.cs" />
+    <Compile Include="Bootstrap\PictureChooserPluginBootstrap.cs" />
+    <Compile Include="Services\MvxPictureChooserTask.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\SqlitePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Views\WebView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\layout\MainView.axml" />
+    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\layout\ImageViewerView.axml" />
+    <AndroidResource Include="Resources\layout\FrequentTrainingView.axml" />
+    <None Include="Web References\MotionsRaceService\ActivityStream.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\AuthenticationResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\Goal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\GoalBriefInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\GoalPeriodResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\KeyValuePairOfStringString.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\MedalResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\MobileService.wsdl" />
+    <None Include="Web References\MotionsRaceService\NewsStreamItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\NumberOfMedalsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\MotionsRaceService\ParticipantOverview.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\PersonalMessageInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\PersonBriefInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\PersonInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\PersonScoreResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\Posting.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\PostingInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\RaceAvailableForLoginResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\RaceDetailsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\RacesAvailabilityResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\RaceShortInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MotionsRaceService\TeamInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\TeamScoreResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\ThreadInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\Training.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\TrainingAndPersonBriefInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\TrainingBriefInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\TrainingType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MotionsRaceService\ValidationResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <AndroidResource Include="Resources\layout\WebView.axml" />
+    <AndroidResource Include="Resources\layout\SignInView.axml" />
+    <AndroidResource Include="Resources\values\Style.xml" />
+    <AndroidResource Include="Resources\drawable\ic_lock.png" />
+    <AndroidResource Include="Resources\drawable\ic_login.png" />
+    <AndroidResource Include="Resources\layout\MainHederFragment.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MainItem.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ActivityTypesView.axml" />
+    <AndroidResource Include="Resources\layout\ActivityTypesItem.axml" />
+    <AndroidResource Include="Resources\drawable\splashmotion.png" />
+    <AndroidResource Include="Resources\drawable\screen.png" />
+    <AndroidResource Include="Resources\layout\ActivityTypeItemsItem.axml" />
+    <AndroidResource Include="Resources\layout\ActivityItem.axml" />
+    <AndroidResource Include="Resources\values\MainViewStyle.xml" />
+    <AndroidResource Include="Resources\values\WelcomeViewStyle.xml" />
+    <AndroidResource Include="Resources\values\SignInViewStyle.xml" />
+    <AndroidResource Include="Resources\drawable\custom_progress_bar_horizontal_main.xml" />
+    <AndroidResource Include="Resources\drawable\custom_btn_main.xml" />
+    <AndroidResource Include="Resources\drawable\custom_header_main.xml" />
+    <AndroidResource Include="Resources\drawable\custom_body_main.xml" />
+    <AndroidResource Include="Resources\layout\ActivityItemView.axml" />
+    <AndroidResource Include="Resources\drawable\checkbox_selector.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\checkbox.png" />
+    <AndroidResource Include="Resources\drawable\checkbox_selected.png" />
+    <AndroidResource Include="Resources\drawable\intensity_1.png" />
+    <AndroidResource Include="Resources\drawable\intensity_2.png" />
+    <AndroidResource Include="Resources\drawable\intensity_3.png" />
+    <AndroidResource Include="Resources\drawable\intensity_4.png" />
+    <AndroidResource Include="Resources\drawable\intensity_5.png" />
+    <AndroidResource Include="Resources\drawable\intensity_empty.png" />
+    <AndroidResource Include="Resources\drawable\custom_background_splash.xml" />
+    <AndroidResource Include="Resources\drawable\intensity2.svg" />
+    <AndroidResource Include="Resources\drawable\custom_scrollbar_thumbvertical_main.xml" />
+    <AndroidResource Include="Resources\drawable\custom_scrollbar_trackvertical_main.xml" />
+    <AndroidResource Include="Resources\layout\ActivityCheckBoxItem.axml" />
+    <None Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <None Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <None Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <None Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <None Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable\LoginPassword.png" />
+    <AndroidResource Include="Resources\drawable\LoginUser.png" />
+    <AndroidResource Include="Resources\drawable\intensity_progress.xml" />
+    <AndroidResource Include="Resources\drawable\intensity_bg_orange.png" />
+    <AndroidResource Include="Resources\drawable\intensity_circle.png" />
+    <AndroidResource Include="Resources\drawable\intensity_bg_grey.9.png" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\drawable\intensity_circle_black.png" />
+    <AndroidResource Include="Resources\drawable\intensity_circle_orange.png" />
+    <AndroidAsset Include="Assets\motionrace\ic_star.png" />
+    <AndroidAsset Include="Assets\motionrace\slide1.png" />
+    <AndroidAsset Include="Assets\motionrace\slide2.png" />
+    <AndroidAsset Include="Assets\motionrace\slide3.png" />
+    <None Include="Documents\c2labs.keystore" />
+    <None Include="Documents\keypass.txt" />
+    <AndroidResource Include="Resources\drawable\clock_animation_01.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_02.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_03.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_04.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_05.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_06.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_07.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_08.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_09.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_10.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_11.png" />
+    <AndroidResource Include="Resources\drawable\clock_animation_12.png" />
+    <AndroidResource Include="Resources\Anim\clock.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Anim\move01.xml" />
+    <AndroidResource Include="Resources\Anim\move02.xml" />
+    <AndroidResource Include="Resources\drawable\clock_icon.png" />
+    <AndroidResource Include="Resources\drawable\clock_icon_white.png" />
+    <AndroidResource Include="Resources\drawable\cloud_refresh.png" />
+    <AndroidResource Include="Resources\drawable\restart.png" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\motionrace\circleFace.png" />
+    <AndroidAsset Include="Assets\motionrace\face.png" />
+    <AndroidAsset Include="Assets\motionrace\ic_next.png" />
+    <AndroidAsset Include="Assets\motionrace\ic_plus.png" />
+    <AndroidAsset Include="Assets\motionrace\motionlogo.png" />
+    <AndroidAsset Include="Assets\motionrace\motionlogo2.png" />
+    <AndroidAsset Include="Assets\motionrace\loginBackground.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset01.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset01sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset02.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset02sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset03.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset03sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset04.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset04sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset05.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset05sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset06.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset06sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset07.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset07sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset08.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset08sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset09.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset09sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset10.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset10sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset11.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset11sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset12.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset12sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset13.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset13sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset14.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset14sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset15.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset15sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset16.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset16sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset17.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset17sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset18.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset18sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset19.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset19sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset20.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset20sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset21.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset21sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset22.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset22sel.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset23.png" />
+    <AndroidAsset Include="Assets\motionrace\TraningCategories\iconset23sel.png" />
+    <AndroidAsset Include="Assets\motionrace\splashlogo.png" />
+    <AndroidAsset Include="Assets\motionrace\ic_close.png" />
+    <Content Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\values\SplashStyle.xml" />
+    <AndroidResource Include="Resources\layout-large\MainItem.xml" />
+    <AndroidResource Include="Resources\drawable\select_image.png" />
+    <None Include="Web References\MotionsRaceService\MobileService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
+      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
+      <Name>MotionsRace.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://service.funbeatrace.c2labs.se/MobileService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MotionsRaceService\</RelPath>
+      <UpdateFromURL>http://service.funbeatrace.c2labs.se/MobileService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets')" />
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-nodpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <LinkDescription Include="Resources\layout\FixAdapterLinking.xml" />
+  </ItemGroup>
+  <ItemGroup />
+</Project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:id="@+id/mainRoot"
+    local:MvxBind="BackgroundColor NativeColor(Theme.Colors.MainColor)">
+	<include
+        android:id="@+id/UiHeader"
+        layout="@layout/MainHederFragment"
+        android:layout_width="match_parent"
+        android:layout_gravity="top"
+        android:background="#008FC5"
+        local:MvxBind="Visibility Visibility(InternetExists)" />
+         <LinearLayout
+	        android:id="@+id/LinearLayoutHome"
+	        android:layout_below="@id/UiHeader"
+	        android:orientation="vertical"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        local:MvxBind="BackgroundColor NativeColor(Theme.Colors.PageTitleColor); Visibility Visibility(FirstLastName);"
+	        android:layout_alignWithParentIfMissing="false">
+		  <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:id="@+id/webview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"/>
+		</LinearLayout>
+</RelativeLayout>

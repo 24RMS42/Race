@@ -1,0 +1,14 @@
+Download (current)
+https://play.google.com/store/apps
+
+Published by
+companyraces.com
+
+Package name
+com.companyraces.atea
+
+c2labs.atea keystore
+password =
+dxcom400800rx
+
+Alias   c2labs.atea

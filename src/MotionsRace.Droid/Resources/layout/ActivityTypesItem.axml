@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="#FFFFFFFF"
+    android:layout_gravity="center|bottom"
+    local:MvxBind="BackgroundColor NativeColor(BackGroundColor)">
+    <ImageView
+        android:id="@+id/UiHsdfsdfsdf"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:gravity="center|top"
+        local:MvxBind="AssetImagePath TrainingCategoryImage(IconFile); Visibility IsSelected, Converter=InvertedVisibility" />
+    <MvxImageView
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:gravity="center|top"
+        local:MvxBind="AssetImagePath TrainingCategoryImage(IconFileSelected); Visibility IsSelected, Converter=Visibility" />
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.6" />
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="0.4">
+            <TextView
+                android:text="ActivityCategoryName"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14dp"
+                local:MvxBind="Text ActivityCategoryName; TextColor NativeColor(TextColor)" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

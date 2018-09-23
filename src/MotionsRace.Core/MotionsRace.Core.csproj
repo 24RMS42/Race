@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MotionsRace.Core</RootNamespace>
+    <AssemblyName>MotionsRace.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ReleaseVersion>4.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseTwitch|AnyCPU'">
+    <OutputPath>bin\ReleaseTwitch\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseAtea|AnyCPU'">
+    <OutputPath>bin\ReleaseAtea\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiClient\ApiErrorMessage.cs" />
+    <Compile Include="BindColors.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="CustomAppStart.cs" />
+    <Compile Include="ApiClient\ApiResponse.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Helpers\Timer.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
+    <Compile Include="Localize\en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localize\sv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sv.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\RefreshNewsFeedListMessage.cs" />
+    <Compile Include="Models\AuthorizeRaceAccessParams.cs" />
+    <Compile Include="Models\AuthorizeRaceAccessResponse.cs" />
+    <Compile Include="Models\AuthorizeRaceAccessResult.cs" />
+    <Compile Include="Models\GetMyNewsFeedParams.cs" />
+    <Compile Include="Models\GetMyNewsFeedResponse.cs" />
+    <Compile Include="Models\GetMyNewsFeedResult.cs" />
+    <Compile Include="Models\GetParticipantOverviewParams.cs" />
+    <Compile Include="Models\GetParticipantOverviewResponse.cs" />
+    <Compile Include="Models\GetParticipantOverviewResult.cs" />
+    <Compile Include="Models\GetRacesParams.cs" />
+    <Compile Include="Models\GetRacesResponse.cs" />
+    <Compile Include="Models\GetRacesResult.cs" />
+    <Compile Include="Models\GetFrequentTrainingTypesParams.cs" />
+    <Compile Include="Models\GetTrainingTypesFrequentResponse.cs" />
+    <Compile Include="Models\NewsFeedItemModel.cs" />
+    <Compile Include="Models\PersonInfo.cs" />
+    <Compile Include="Models\Platform.cs" />
+    <Compile Include="Models\RaceDetails.cs" />
+    <Compile Include="Models\LoginResponse.cs" />
+    <Compile Include="Models\ServerDate.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Models\TeamInfo.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\ValidateAndCreateSecretParams.cs" />
+    <Compile Include="Models\ValidateAndCreateSecretResponse.cs" />
+    <Compile Include="Models\ValidateAndCreateSecretResult.cs" />
+    <Compile Include="Models\WebServiceMode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BaseWebService.cs" />
+    <Compile Include="Services\IInsights.cs" />
+    <Compile Include="Services\ILanguageService.cs" />
+    <Compile Include="Services\IMessageService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
+    <Compile Include="Services\ISettingsService.cs" />
+    <Compile Include="Services\IPlatformService.cs" />
+    <Compile Include="Services\IWebService.cs" />
+    <Compile Include="Services\LanguageService.cs" />
+    <Compile Include="Services\SettingsService.cs" />
+    <Compile Include="Themes\Base\ITheme.cs" />
+    <Compile Include="Themes\Base\IThemeColors.cs" />
+    <Compile Include="Themes\Base\IThemeImages.cs" />
+    <Compile Include="Themes\Helper\ThemsHelper.cs" />
+    <Compile Include="Services\IThemesManager.cs" />
+    <Compile Include="Services\ThemesManager.cs" />
+    <Compile Include="Themes\AteaTheme.cs" />
+    <Compile Include="Themes\TwitchTheme.cs" />
+    <Compile Include="Themes\MotionRaceTheme.cs" />
+    <Compile Include="ViewModels\BaseScreenViewModel.cs" />
+    <Compile Include="ViewModels\FrequentTrainingViewModel.cs" />
+    <Compile Include="ViewModels\HeaderScreenViewModel.cs" />
+    <Compile Include="ViewModels\ImageViewerViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\SignInViewModel.cs" />
+    <Compile Include="ViewModels\ActivityTypesViewModel.cs" />
+    <Compile Include="ViewModels\WelcomeViewModel.cs" />
+    <Compile Include="Models\GetTrainingTypesParams.cs" />
+    <Compile Include="Models\GetTrainingTypesResult.cs" />
+    <Compile Include="Models\GetTrainingTypesResponse.cs" />
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Models\TrainingCategory.cs" />
+    <Compile Include="Models\TrainingCategoryState.cs" />
+    <Compile Include="Extentions\ListExtentions.cs" />
+    <Compile Include="Models\Training.cs" />
+    <Compile Include="Models\TrainingUnit.cs" />
+    <Compile Include="Models\SaveTrainingParams.cs" />
+    <Compile Include="Models\SaveTrainingResponse.cs" />
+    <Compile Include="Services\PhotoService.cs" />
+    <Compile Include="Services\IPhotoService.cs" />
+    <Compile Include="Messages\ImageChooseMessage.cs" />
+    <Compile Include="Models\ActivityCheckBox.cs" />
+    <Compile Include="Models\SaveImageResponse.cs" />
+    <Compile Include="Services\IImageResizeService.cs" />
+    <Compile Include="Models\GetServerDateTimeResponse.cs" />
+    <Compile Include="ViewModels\ActivityItemViewModel.cs" />
+    <Compile Include="Themes\NordenMachineryTheme.cs" />
+    <Compile Include="Themes\CoromaticTheme.cs" />
+    <Compile Include="Themes\NetEntTheme.cs" />
+    <Compile Include="Themes\KronobergTheme.cs" />
+    <Compile Include="ViewModels\WebViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.1.6.2\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Json">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Json.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Messenger.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Visibility.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Async">
+      <HintPath>..\..\packages\SQLite.Net.Async-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Sqlite">
+      <HintPath>..\..\packages\MvvmCross.Plugin.SQLitePCL.4.2.2\lib\portable-win+net45+wp8+win8+wpa81+win81+dotnet\MvvmCross.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PictureChooser">
+      <HintPath>..\..\packages\MvvmCross.Plugin.PictureChooser.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.PictureChooser.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.1.1\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.1.1\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Localize\en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localize\sv.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>sv.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+</Project>

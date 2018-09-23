@@ -1,0 +1,142 @@
+<views:MvxWindowsPage
+    x:Class="MotionsRace.WindowsPhone.Views.ActivityTypesView"    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:MotionsRace.WindowsPhone.Controls"
+    xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"    
+    mc:Ignorable="d" RequestedTheme="Light" Background="#006184">
+
+    <Grid Background="#D9DADC" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <controls:HeaderControl
+            ShowAddButton="False"
+            ShowLoginButton="{Binding ShowLoginButton}"
+            Grid.Row="0"/>
+
+
+        <Grid Grid.Row="1" Background="White">
+            <TextBlock
+                Text="{Binding [Activity_RegisterActivity], FallbackValue=Register Activity-}" 
+                Style="{StaticResource SubheaderTextBlockStyle}"
+                FontSize="26"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                />
+        </Grid>
+
+        <Grid Grid.Row="2" Background="#D9DADC"  Margin="0,0,0,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <GridView
+                Visibility="{Binding AnyCategorySelected, Converter={StaticResource InvertedVisibilityValueConverter}}"
+                SelectionChanged="GridView_SelectionChanged"
+                ItemsSource="{Binding TrainingCategories}" 
+                Margin="12,12,12,0" 
+                VerticalAlignment="Top"
+                Grid.Row="0"
+                Height="auto">
+                <GridView.ItemContainerStyle >
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="VerticalAlignment" Value="Top"/>
+                    </Style>
+                </GridView.ItemContainerStyle>
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image 
+                                Visibility="{Binding IsSelected, Converter={StaticResource InvertedVisibilityValueConverter}}"
+                                Source="{Binding IconFile, Converter={StaticResource CategoryImageConverter}}"/>
+                            <Image 
+                                Visibility="{Binding IsSelected, Converter={StaticResource VisibilityValueConverter}}"
+                                Source="{Binding IconFileSelected, Converter={StaticResource CategoryImageConverter}}"/>
+                            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10">
+                                <TextBlock Text="{Binding ActivityCategoryName}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
+                                
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapGrid MaximumRowsOrColumns="125" Orientation="Horizontal" HorizontalChildrenAlignment="Stretch" VerticalChildrenAlignment="Top" ItemHeight="125" ItemWidth="125" VerticalAlignment="Top">
+                        </WrapGrid>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+            </GridView>
+            <Grid Visibility="{Binding AnyCategorySelected, Converter={StaticResource VisibilityValueConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ListView
+                    SelectionChanged="GridView_SelectionChanged"
+                    ItemsSource="{Binding TrainingCategories}"
+                    Visibility="{Binding TrainingCategoriesVisibility, Converter={StaticResource VisibilityValueConverter}}"
+                    Grid.Row="0"
+                    Margin="12">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel  Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="75" Height="75" Margin="4">
+                                <Image 
+                                    Visibility="{Binding IsSelected, Converter={StaticResource InvertedVisibilityValueConverter}}"
+                                    Source="{Binding IconFile, Converter={StaticResource CategoryImageConverter}}" Stretch="UniformToFill"/>
+                                <Image 
+                                    Visibility="{Binding IsSelected, Converter={StaticResource VisibilityValueConverter}}"
+                                    Source="{Binding IconFileSelected, Converter={StaticResource CategoryImageConverter}}" Stretch="UniformToFill"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView 
+                    SelectionChanged="ListView_SelectionChanged"
+                    ItemsSource="{Binding TrainingCategoryItems}" Margin="0,10,0,0" Grid.Row="1">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="White" Margin="0,2,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Background="White" Margin="2"/>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,10,10,10">
+                                    <TextBlock Text="{Binding TrainingTypeName}" VerticalAlignment="Center" HorizontalAlignment="Left" TextAlignment="Left" TextWrapping="Wrap" FontSize="12"/>
+                                    <TextBlock 
+                                        Text="{Binding Description}" 
+                                        FontSize="10"
+                                        Visibility="{Binding Description, Converter={StaticResource VisibilityValueConverter}}"
+                                        VerticalAlignment="Center" HorizontalAlignment="Left" TextAlignment="Left" TextWrapping="Wrap"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" TextAlignment="Left" TextWrapping="Wrap" Margin="3" FontSize="12" Foreground="{Binding Colors[ACTIVITY_TYPES_PANELS_SCORE_FOREGROUND], Converter={StaticResource NativeColorValueConverter}}">
+                                    <Run Text="{Binding UnitString}"/>
+                                </TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </Grid>
+</views:MvxWindowsPage>
