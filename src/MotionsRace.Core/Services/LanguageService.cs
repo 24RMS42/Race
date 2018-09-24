@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Resources;
 using MotionsRace.Core;
+using MotionsRace.Core.Localize;
 
 namespace MotionsRace.Core.Services
 {

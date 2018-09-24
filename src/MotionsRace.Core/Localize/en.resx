@@ -124,7 +124,7 @@
     <value>Problem</value>
   </data>
   <data name="Login_Email" xml:space="preserve">
-    <value>Email</value>
+    <value>Username</value>
   </data>
   <data name="Login_EmailRequired" xml:space="preserve">
     <value>Email required</value>
