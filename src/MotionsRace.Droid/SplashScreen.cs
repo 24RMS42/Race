@@ -77,16 +77,16 @@ namespace MotionsRace.Droid
 
             // -------- Xamarin Insights integration START -----
 
-            Insights.HasPendingCrashReport += (sender, isStartupCrash) =>
-            {
-                if (isStartupCrash)
-                {
-                    Insights.PurgePendingCrashReports().Wait();
-                }
-            };
+            //Insights.HasPendingCrashReport += (sender, isStartupCrash) =>
+            //{
+            //    if (isStartupCrash)
+            //    {
+            //        Insights.PurgePendingCrashReports().Wait();
+            //    }
+            //};
 
 #if DEBUG
-            Insights.Initialize(Insights.DebugModeKey, this);
+            //Insights.Initialize(Insights.DebugModeKey, this);
 #elif TWITCH
 			Insights.Initialize("a49b718ff6aaa7eacdd05ce6ba5121443216e229", this);
 #else

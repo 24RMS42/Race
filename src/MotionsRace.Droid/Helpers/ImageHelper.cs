@@ -21,7 +21,7 @@ namespace MotionsRace.Droid.Helpers
 			}
 			catch (Exception e)
 			{
-				Insights.Report(e);
+				//Insights.Report(e);
 			}
 
 			return result;
@@ -39,7 +39,7 @@ namespace MotionsRace.Droid.Helpers
 			}
 			catch (Exception e)
 			{
-				Insights.Report(e);
+				//Insights.Report(e);
 			}
 
 			return result;
