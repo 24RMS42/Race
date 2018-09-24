@@ -8,7 +8,6 @@ using MotionsRace.Core.ViewModels;
 using MotionsRace.Core;
 using System.Drawing;
 using System;
-using Xamarin;
 using System.Collections.Generic;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.iOS.Views;
@@ -136,9 +135,9 @@ namespace MotionsRace.Touch.Views
 				}
 				catch(Exception exception)
 				{
-					Insights.Report(exception, new Dictionary <string, string> { 
-						{"info", "activitytypesview,itemsSource.SelectedItemChanged"}
-					}, Xamarin.Insights.Severity.Error);
+					//Insights.Report(exception, new Dictionary <string, string> { 
+					//	{"info", "activitytypesview,itemsSource.SelectedItemChanged"}
+					//}, Xamarin.Insights.Severity.Error);
 				}
 
 				//itemsSource.RowUnhighlighted(_itemsTable, itemsSource.)

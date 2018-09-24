@@ -10,7 +10,6 @@ using System.Linq;
 using System;
 using Acr.UserDialogs;
 using System.Timers;
-using Xamarin;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Plugins.Color.iOS;
@@ -632,9 +631,9 @@ namespace MotionsRace.Touch.Views
 			}
 			catch(Exception exception)
 			{
-				Insights.Report(exception, new Dictionary <string, string> { 
-					{"info", "activityitemview,ViewDidLoad"}
-				}, Xamarin.Insights.Severity.Error);
+				//Insights.Report(exception, new Dictionary <string, string> { 
+				//	{"info", "activityitemview,ViewDidLoad"}
+				//}, Xamarin.Insights.Severity.Error);
 			}
 
         }
@@ -664,9 +663,9 @@ namespace MotionsRace.Touch.Views
 			}
 			catch(Exception exception)
 			{
-				Insights.Report(exception, new Dictionary <string, string> { 
-						{"info", "activityitemview,ViewWillAppear"}
-				}, Xamarin.Insights.Severity.Error);
+				//Insights.Report(exception, new Dictionary <string, string> { 
+				//		{"info", "activityitemview,ViewWillAppear"}
+				//}, Xamarin.Insights.Severity.Error);
 			}
 
 		}

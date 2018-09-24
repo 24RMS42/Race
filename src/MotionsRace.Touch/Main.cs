@@ -4,7 +4,6 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
-using Xamarin;
 
 namespace MotionsRace.Touch
 {
@@ -18,18 +17,18 @@ namespace MotionsRace.Touch
 
 			// -------- Xamarin Insights integration START -----
 
-			Insights.HasPendingCrashReport += (sender, isStartupCrash) =>
-			{
-				if (isStartupCrash) {
-					Insights.PurgePendingCrashReports().Wait();
-				}
-			};
+			//Insights.HasPendingCrashReport += (sender, isStartupCrash) =>
+			//{
+			//	if (isStartupCrash) {
+			//		Insights.PurgePendingCrashReports().Wait();
+			//	}
+			//};
 
-			#if DEBUG
-			Insights.Initialize(Insights.DebugModeKey);
-			#else
-			Insights.Initialize("0cbbe56579e4c167c34a9aa6a0b0ea08ef1f85bb");
-			#endif
+			//#if DEBUG
+			//Insights.Initialize(Insights.DebugModeKey);
+			//#else
+			//Insights.Initialize("0cbbe56579e4c167c34a9aa6a0b0ea08ef1f85bb");
+			//#endif
 
 			// -------- Xamarin Insights integration END -----
 

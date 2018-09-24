@@ -10,7 +10,6 @@ using System.Reflection;
 using System.IO;
 using MvvmCross.iOS.Views;
 using MvvmCross.Plugins.Color.iOS;
-using Xamarin;
 using MvvmCross.Binding.iOS.Views;
 
 namespace MotionsRace.Touch.Views
