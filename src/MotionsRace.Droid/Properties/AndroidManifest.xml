@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyraces.motionsrace" android:versionCode="64" android:versionName="64">
-	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
 	<application android:label="MotionsRace" android:icon="@drawable/Icon"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />

@@ -2,7 +2,7 @@
 using System.Linq;
 using MotionsRace.Core.Models;
 using MvvmCross.Plugins.Sqlite;
-using SQLite.Net;
+using SQLite;
 
 namespace MotionsRace.Core.Services
 {
