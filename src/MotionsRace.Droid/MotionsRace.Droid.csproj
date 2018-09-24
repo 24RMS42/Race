@@ -505,12 +505,6 @@
     <None Include="Web References\MotionsRaceService\MobileService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
-      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
-      <Name>MotionsRace.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
@@ -541,4 +535,10 @@
     <LinkDescription Include="Resources\layout\FixAdapterLinking.xml" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
+      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
+      <Name>MotionsRace.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

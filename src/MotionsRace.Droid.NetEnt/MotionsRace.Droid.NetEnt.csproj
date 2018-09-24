@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MotionsRace.Droid</RootNamespace>
     <AssemblyName>MotionsRace.Droid.NetEnt</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -455,12 +455,6 @@
     <Folder Include="Resources\values\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
-      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
-      <Name>MotionsRace.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\netent\circleFace.png" />
     <AndroidAsset Include="Assets\netent\doublelogo_20px.png" />
     <AndroidAsset Include="Assets\netent\face.png" />
@@ -527,6 +521,12 @@
     <AndroidAsset Include="Assets\netent\TraningCategories\iconset22sel.png" />
     <AndroidAsset Include="Assets\netent\TraningCategories\iconset23.png" />
     <AndroidAsset Include="Assets\netent\TraningCategories\iconset23sel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
+      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
+      <Name>MotionsRace.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets')" />

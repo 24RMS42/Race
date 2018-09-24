@@ -219,12 +219,6 @@
   <Import Project="..\..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
   <Import Project="..\..\packages\Xamarin.Insights.1.12.3\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.12.3\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
   <ItemGroup>
-    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
-      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
-      <Name>MotionsRace.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="..\MotionsRace.Droid\ApiClient\MotionsRaceClient.cs">
       <Link>ApiClient\MotionsRaceClient.cs</Link>
     </Compile>
@@ -467,6 +461,12 @@
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\logo167.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon167_167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
+      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
+      <Name>MotionsRace.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
 </Project>

@@ -687,12 +687,6 @@ c2labs.twitch</AndroidSigningKeyAlias>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
-      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
-      <Name>MotionsRace.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
@@ -709,6 +703,12 @@ c2labs.twitch</AndroidSigningKeyAlias>
       <CachedSettingsPropName>
       </CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
+      <Project>{C833ABE2-8B6D-4AF3-ABFB-C132EBE0ED3E}</Project>
+      <Name>MotionsRace.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Insights.1.12.3\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.12.3\build\MonoAndroid10\Xamarin.Insights.targets')" />
