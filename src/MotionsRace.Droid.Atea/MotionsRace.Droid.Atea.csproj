@@ -14,7 +14,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <ReleaseVersion>4.0</ReleaseVersion>
     <NuGetPackageImportStamp>
@@ -187,10 +187,13 @@ c2labs.Atea</AndroidSigningKeyAlias>
       <HintPath>..\..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
-      <HintPath>..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.9\lib\MonoAndroid10\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.8\lib\MonoAndroid7\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform">
-      <HintPath>..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.9\lib\MonoAndroid10\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.8\lib\MonoAndroid7\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\..\packages\Xamarin.Insights.1.12.3\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -323,9 +326,6 @@ c2labs.Atea</AndroidSigningKeyAlias>
     </Compile>
     <Compile Include="..\MotionsRace.Droid\Services\XamarinInsights.cs">
       <Link>Services\XamarinInsights.cs</Link>
-    </Compile>
-    <Compile Include="..\MotionsRace.Droid\Bootstrap\DownloadCachePluginBootstrap.cs">
-      <Link>Bootstrap\DownloadCachePluginBootstrap.cs</Link>
     </Compile>
     <Compile Include="..\MotionsRace.Droid\Views\WebView.cs">
       <Link>Views\WebView.cs</Link>
@@ -680,7 +680,6 @@ c2labs.Atea</AndroidSigningKeyAlias>
     </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets')" />
   <ItemGroup />
   <ItemGroup>
     <AndroidAsset Include="Assets\atea\atea.png" />
@@ -746,4 +745,5 @@ c2labs.Atea</AndroidSigningKeyAlias>
   <ItemGroup />
   <ItemGroup />
   <ItemGroup />
+  <Import Project="..\..\packages\Xamarin.Insights.1.12.3\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.12.3\build\MonoAndroid10\Xamarin.Insights.targets')" />
 </Project>
