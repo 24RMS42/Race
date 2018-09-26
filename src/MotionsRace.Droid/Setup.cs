@@ -10,6 +10,7 @@ using MvvmCross.Platform.Platform;
 using MvvmCross.Plugins.PictureChooser;
 using MvvmCross.Platform;
 using Acr.UserDialogs;
+using MvvmCross.Platform.Logging;
 
 namespace MotionsRace.Droid
 {
@@ -41,6 +42,9 @@ namespace MotionsRace.Droid
 
 			base.InitializeFirstChance();
 		}
+
+        protected override MvxLogProviderType GetDefaultLogProviderType()
+            => MvxLogProviderType.None;
 
 		protected override void InitializeLastChance()
 		{
