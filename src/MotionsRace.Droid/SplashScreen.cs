@@ -85,13 +85,13 @@ namespace MotionsRace.Droid
             //    }
             //};
 
-#if DEBUG
-            //Insights.Initialize(Insights.DebugModeKey, this);
-#elif TWITCH
-			Insights.Initialize("a49b718ff6aaa7eacdd05ce6ba5121443216e229", this);
-#else
-			Insights.Initialize("e6c8308ae7e5f4841a77564c802066aa01b441bf", this);
-#endif
+//#if DEBUG
+//            //Insights.Initialize(Insights.DebugModeKey, this);
+//#elif TWITCH
+//			Insights.Initialize("a49b718ff6aaa7eacdd05ce6ba5121443216e229", this);
+//#else
+//			Insights.Initialize("e6c8308ae7e5f4841a77564c802066aa01b441bf", this);
+//#endif
 
             // -------- Xamarin Insights integration END -----
 

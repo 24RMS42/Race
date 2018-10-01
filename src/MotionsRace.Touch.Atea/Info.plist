@@ -7,7 +7,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.companyraces.atea</string>
 	<key>CFBundleShortVersionString</key>
-	<string>30.0</string>
+	<string>31.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -29,7 +29,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>30.0</string>
+	<string>31.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>XSAppIconAssets</key>
