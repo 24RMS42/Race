@@ -379,6 +379,7 @@
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Square167x167.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\motionsrace-icon-1024x1024.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">

@@ -455,6 +455,7 @@
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\logo167.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon167_167.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appikon_sverigestafetten_1024x1024.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MotionsRace.Core\MotionsRace.Core.csproj">
