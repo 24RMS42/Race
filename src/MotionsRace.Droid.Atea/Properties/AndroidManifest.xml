@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyraces.atea" android:installLocation="auto" android:versionCode="25" android:versionName="25">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyraces.atea" android:installLocation="auto" android:versionCode="26" android:versionName="26">
 	<uses-sdk android:minSdkVersion="17" />
 	<application android:label="Sverigestafetten Atea" android:icon="@drawable/Icon"></application>
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
