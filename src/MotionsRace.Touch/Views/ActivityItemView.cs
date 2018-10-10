@@ -319,6 +319,7 @@ namespace MotionsRace.Touch.Views
 				// units-distance
 
 				var keyboardToolbar = new UIToolbar ();
+                keyboardToolbar.BarTintColor = UIColor.FromRGBA(22, 62, 85, 255);
 				keyboardToolbar.SizeToFit ();
 				var flexBarButton = new UIBarButtonItem (UIBarButtonSystemItem.FixedSpace);
 				var doneBarButton = new UIBarButtonItem (UIBarButtonSystemItem.Done, (s, e) =>
