@@ -220,10 +220,10 @@ namespace MotionsRace.Touch.Views
 
 			this.NavigationItem.SetLeftBarButtonItems(new [] {_liveRecordButton, _liveRecordFavButton }, true);
 
-			_loginButton = new UIBarButtonItem (UIImage.FromFile("bar-chart.png"), UIBarButtonItemStyle.Done, (sender, args) => {
+            _loginButton = new UIBarButtonItem(UIBarButtonSystemItem.Action, (sender, args) => {
 				ViewModel.LoginCommand.Execute ();
 			});
-			_loginButton.TintColor = UIColor.Clear;
+			//_loginButton.TintColor = UIColor.Clear;
             //_loginButton.Image = UIImage.FromFile("scoreicon-3.png");
 
 			this.NavigationItem.SetRightBarButtonItem(_loginButton, true);
@@ -446,7 +446,7 @@ namespace MotionsRace.Touch.Views
             var set = this.CreateBindingSet<MainView, Core.ViewModels.MainViewModel>();
 			set.Bind(_liveRecordButton).For(x => x.Enabled).To(vm => vm.ShowLiveRecordButton);
 			//set.Bind(_liveRecordButton).For(x => x.CustomView).To(vm => vm.ShowLiveRecordButton).WithConversion(new BoolToBarButtonEmptyViewValueConverter());
-			//set.Bind(_loginButton).For(x => x.Enabled).To(vm => vm.ShowLoginButton);
+			set.Bind(_loginButton).For(x => x.Enabled).To(vm => vm.ShowLoginButton);
 			//set.Bind(_loginButton).For(x => x.CustomView).To(vm => vm.ShowLoginButton).WithConversion(new BoolToBarButtonEmptyViewValueConverter());
 			//set.Bind(_liveRecordButton).For("Visibility").To(vm => vm.ShowLiveRecordButton).WithConversion("Visibility"); // not works yet
 			//set.Bind(_loginButton).For("Visibility").To(vm => vm.ShowLoginButton).WithConversion("Visibility"); // not works yet
